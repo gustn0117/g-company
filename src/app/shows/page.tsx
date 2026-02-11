@@ -7,7 +7,22 @@ import { useInView } from "@/hooks/useInView";
 
 const shows = [
   {
+    title: "키키키의 안전생활백서",
+    slug: "kikiki-safety",
+    genre: "안전교육 창작뮤지컬",
+    audience: "7세 이상 (유아·어린이)",
+    duration: "45분",
+    desc: "K510 행성의 키키키와 지구 친구 비상구가 함께 떠나는 안전 모험! 즐거운 노래와 상황극으로 배우는 생활 속 안전 뮤지컬.",
+    longDesc:
+      "K510 행성에서 지구를 관찰하던 키키키가 드디어 꿈꾸던 지구 여행을 떠납니다. 그곳에서 만난 첫 번째 친구 비상구와 함께 지구 곳곳을 다니며, 아이들이 일상에서 자주 마주하는 위험 상황과 생활 속 안전 습관들을 알려주기 시작합니다. 즐거운 노래와 움직임, 눈높이에 맞춘 설명과 상황극을 통해 진짜 생활 속 안전을 배우는 따뜻하고 유쾌한 안전 뮤지컬입니다.",
+    gradient: "from-teal-800 to-cyan-900",
+    tag: "안전교육",
+    highlights: ["유아·어린이 맞춤 안전교육", "참여형 상황극 연출", "언론 보도 실적 보유"],
+    hasDetailPage: true,
+  },
+  {
     title: "별빛 소나타",
+    slug: null,
     genre: "성장 뮤지컬",
     audience: "중·고등학생",
     duration: "70분",
@@ -17,9 +32,11 @@ const shows = [
     gradient: "from-violet-900 to-indigo-900",
     tag: "인기",
     highlights: ["우정과 성장의 메시지", "청소년 공감 스토리", "참여형 무대 연출"],
+    hasDetailPage: false,
   },
   {
     title: "해피 투게더",
+    slug: null,
     genre: "학교폭력예방 뮤지컬",
     audience: "초·중학생",
     duration: "60분",
@@ -29,9 +46,11 @@ const shows = [
     gradient: "from-emerald-900 to-teal-900",
     tag: "교육",
     highlights: ["학교폭력 예방 교육", "관객 참여 프로그램", "교육부 인정 콘텐츠"],
+    hasDetailPage: false,
   },
   {
     title: "드림 스테이지",
+    slug: null,
     genre: "진로탐색 뮤지컬",
     audience: "중·고등학생",
     duration: "65분",
@@ -41,9 +60,11 @@ const shows = [
     gradient: "from-amber-900 to-orange-900",
     tag: "진로",
     highlights: ["다양한 직업 소개", "진로 동기부여", "체험 활동 연계 가능"],
+    hasDetailPage: false,
   },
   {
     title: "우리들의 시간",
+    slug: null,
     genre: "인성교육 뮤지컬",
     audience: "초등학생",
     duration: "50분",
@@ -53,6 +74,7 @@ const shows = [
     gradient: "from-rose-900 to-pink-900",
     tag: "NEW",
     highlights: ["어린이 맞춤 콘텐츠", "인터랙티브 공연", "인성 가치 교육"],
+    hasDetailPage: false,
   },
 ];
 
@@ -160,25 +182,48 @@ export default function ShowsPage() {
                       ))}
                     </div>
                   </div>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 mt-8 text-accent font-bold hover:gap-3 transition-all"
-                  >
-                    이 작품 문의하기
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                    {show.hasDetailPage && show.slug && (
+                      <Link
+                        href={`/shows/${show.slug}`}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-black text-white text-sm font-bold rounded-full hover:bg-gray-800 transition-all group"
+                      >
+                        상세 보기
+                        <svg
+                          className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </Link>
+                    )}
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-2 text-accent font-bold hover:gap-3 transition-all"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </Link>
+                      이 작품 문의하기
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
