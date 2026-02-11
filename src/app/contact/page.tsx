@@ -266,10 +266,6 @@ export default function ContactPage() {
                       <option value="키키키의 안전생활백서">키키키의 안전생활백서 (안전교육)</option>
                       <option value="2084 지구난민">2084 지구난민 (환경뮤지컬)</option>
                       <option value="더 페인팅">더 페인팅 (기업가정신)</option>
-                      <option value="별빛 소나타">별빛 소나타 (성장 뮤지컬)</option>
-                      <option value="해피 투게더">해피 투게더 (학교폭력예방)</option>
-                      <option value="드림 스테이지">드림 스테이지 (진로탐색)</option>
-                      <option value="우리들의 시간">우리들의 시간 (인성교육)</option>
                       <option value="기타">기타 / 상담 후 결정</option>
                     </select>
                   </div>
