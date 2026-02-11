@@ -264,6 +264,7 @@ export default function ContactPage() {
                     <select className="w-full px-4 py-3 bg-white border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent transition-all outline-none text-gray-500">
                       <option value="">선택해주세요</option>
                       <option value="키키키의 안전생활백서">키키키의 안전생활백서 (안전교육)</option>
+                      <option value="2084 지구난민">2084 지구난민 (환경뮤지컬)</option>
                       <option value="별빛 소나타">별빛 소나타 (성장 뮤지컬)</option>
                       <option value="해피 투게더">해피 투게더 (학교폭력예방)</option>
                       <option value="드림 스테이지">드림 스테이지 (진로탐색)</option>
