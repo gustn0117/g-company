@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
@@ -6,9 +8,11 @@ export default function Footer() {
         <div className="py-16 grid md:grid-cols-4 gap-10 border-b border-white/10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="text-2xl font-extrabold tracking-tight">
-              <span className="text-accent">G</span>COMPANY
-            </div>
+            <Link href="/" className="inline-block">
+              <div className="text-2xl font-extrabold tracking-tight">
+                <span className="text-accent">G</span>COMPANY
+              </div>
+            </Link>
             <p className="mt-4 text-white/40 text-sm leading-relaxed max-w-md">
               지컴퍼니는 찾아가는 뮤지컬 공연 전문 기업으로, 학교와 기관에
               감동적인 무대 경험을 전달합니다. 전국 어디든 찾아가 최고의 공연을
@@ -21,18 +25,19 @@ export default function Footer() {
             <h4 className="font-bold text-sm text-white/80 mb-4">바로가기</h4>
             <ul className="space-y-3">
               {[
-                { label: "회사소개", href: "#about" },
-                { label: "공연안내", href: "#services" },
-                { label: "작품소개", href: "#shows" },
-                { label: "공연문의", href: "#contact" },
+                { label: "회사소개", href: "/about" },
+                { label: "공연안내", href: "/services" },
+                { label: "작품소개", href: "/shows" },
+                { label: "공연후기", href: "/reviews" },
+                { label: "공연문의", href: "/contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-white/40 hover:text-accent transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

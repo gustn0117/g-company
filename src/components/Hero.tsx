@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
@@ -48,8 +50,8 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mt-10 animate-fade-in-up delay-300">
-            <a
-              href="#services"
+            <Link
+              href="/services"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-accent hover:text-black transition-all duration-300 group"
             >
               공연 알아보기
@@ -66,13 +68,13 @@ export default function Hero() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
             >
               공연 문의하기
-            </a>
+            </Link>
           </div>
         </div>
 
