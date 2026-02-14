@@ -59,9 +59,10 @@ export default function Reviews() {
             Reviews
           </p>
           <h2 className="text-4xl md:text-5xl font-black text-black">
-            공연을 경험한 분들의
-            <br />
-            <span className="text-accent">생생한 후기</span>
+            <span className="block">공연을 경험한 분들의</span>
+            <span className="block mt-2 md:mt-3">
+              <span className="text-accent">생생한 후기</span>
+            </span>
           </h2>
         </div>
 

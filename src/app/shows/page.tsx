@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/CTABanner";
 import { useInView } from "@/hooks/useInView";
@@ -15,8 +16,9 @@ const shows = [
     desc: "K510 행성의 키키키와 지구 친구 비상구가 함께 떠나는 안전 모험! 즐거운 노래와 상황극으로 배우는 생활 속 안전 뮤지컬.",
     longDesc:
       "K510 행성에서 지구를 관찰하던 키키키가 드디어 꿈꾸던 지구 여행을 떠납니다. 그곳에서 만난 첫 번째 친구 비상구와 함께 지구 곳곳을 다니며, 아이들이 일상에서 자주 마주하는 위험 상황과 생활 속 안전 습관들을 알려주기 시작합니다. 즐거운 노래와 움직임, 눈높이에 맞춘 설명과 상황극을 통해 진짜 생활 속 안전을 배우는 따뜻하고 유쾌한 안전 뮤지컬입니다.",
-    gradient: "from-teal-800 to-cyan-900",
+    gradient: "from-[#3B5878] to-[#1E3450]",
     tag: "안전교육",
+    poster: "/images/키키키 세로.png",
     highlights: ["유아·어린이 맞춤 안전교육", "참여형 상황극 연출", "언론 보도 실적 보유"],
     hasDetailPage: true,
   },
@@ -29,8 +31,9 @@ const shows = [
     desc: "황폐해진 2084년 미래 지구에서 생존을 위해 지구를 떠나는 과정을 통해, 기후 위기의 현실과 인간의 책임을 질문하는 창작뮤지컬.",
     longDesc:
       "2084년, 뒤죽박죽인 날씨와 모래비, 전염병으로 황폐해진 지구. 사람들은 지구를 떠나기 시작하고, 과학자와 정치인마저 사라진다. 강산의 가족은 낡은 우주선 '이카로스'를 타고 달로 향하는 여정에서, 진짜 떠나야 할 것이 '지구'가 아니라 우리 안의 무책임한 선택들이었음을 깨닫기 시작합니다. 2023 초록별 SF환경동화상 우수상 수상작을 원작으로 한 입체낭독극 형식의 예술교육형 공연입니다.",
-    gradient: "from-slate-800 to-zinc-900",
+    gradient: "from-[#2D3654] to-[#151D30]",
     tag: "환경",
+    poster: "/images/2084 지구난민 포스터 세로.png",
     highlights: ["초록별 SF환경동화상 우수상 수상작 원작", "입체낭독극 형식의 독창적 연출", "탄소중립·환경교육 연계 가능"],
     hasDetailPage: true,
   },
@@ -43,8 +46,9 @@ const shows = [
     desc: "체코 프라하에서의 실화를 바탕으로 한 창작 뮤지컬. 도전과 실패, 그리고 다시 일어서는 기업가정신을 무대 위에서 감동적으로 전달합니다.",
     longDesc:
       "작가 토코토코진(김현진)의 체코 프라하에서의 실화를 바탕으로 창작된 작품으로, 4차 산업시대 청소년 교육에 꼭 필요한 기업가정신을 뮤지컬에 담았습니다. 새로운 환경에 대한 도전, 한계를 극복하는 용기, 실패를 두려워하지 않는 태도를 무대 위에서 관객들에게 강렬한 메시지로 전달합니다. 2022 개정 교육과정 '기업가정신' 교과목 신설에 맞춘 교육 연계형 공연입니다.",
-    gradient: "from-fuchsia-900 to-purple-900",
+    gradient: "from-red-900 to-rose-900",
     tag: "기업가정신",
+    poster: "/images/더페인팅 포스터1.png",
     highlights: ["실화 기반 창작극", "고교학점제 연계 가능", "2024년 전국 학교 공연 21회"],
     hasDetailPage: true,
   },
@@ -82,6 +86,15 @@ export default function ShowsPage() {
                 <div
                   className={`bg-gradient-to-br ${show.gradient} p-8 md:p-12 min-h-[300px] flex flex-col justify-between relative overflow-hidden`}
                 >
+                  {/* Poster background image */}
+                  <Image
+                    src={show.poster}
+                    alt={`${show.title} 포스터`}
+                    fill
+                    className="object-cover opacity-20"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
                   <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
                   <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 

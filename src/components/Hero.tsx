@@ -1,26 +1,54 @@
 "use client";
 
+import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
+const heroImages = [
+  { src: "/images/더페인팅사진.png", alt: "더 페인팅 공연 현장" },
+  { src: "/images/2.png", alt: "관객과 함께하는 지컴퍼니" },
+  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 002.png", alt: "더 페인팅 전체 캐스트" },
+  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 007.png", alt: "블루 조명 속 무대" },
+  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 019.png", alt: "배우들의 열연" },
+];
+
 export default function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
+
   return (
     <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-        {/* Decorative circles */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-white/3 rounded-full blur-3xl" />
-
-        {/* Grid pattern overlay */}
+      {/* Background Images Slideshow */}
+      {heroImages.map((image, index) => (
         <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-      </div>
+          key={image.src}
+          className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="object-cover object-center"
+            priority={index === 0}
+            quality={90}
+          />
+        </div>
+      ))}
+
+      {/* Overlays */}
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full">
         <div className="max-w-3xl">
@@ -33,12 +61,12 @@ export default function Hero() {
           </div>
 
           {/* Main heading */}
-          <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight animate-fade-in-up delay-100">
-            무대가
-            <br />
-            <span className="text-accent">여러분에게</span>
-            <br />
-            찾아갑니다.
+          <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight animate-fade-in-up delay-100">
+            <span className="block">공연으로</span>
+            <span className="block mt-2 md:mt-3">
+              <span className="text-accent">특별한 순간</span>을
+            </span>
+            <span className="block mt-2 md:mt-3">만듭니다.</span>
           </h1>
 
           {/* Sub text */}
@@ -78,12 +106,20 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in delay-500">
-          <span className="text-xs text-white/40 tracking-widest uppercase">
-            Scroll
-          </span>
-          <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
+        {/* Slide indicators */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 animate-fade-in delay-500">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`transition-all duration-300 rounded-full ${
+                index === currentIndex
+                  ? "w-8 h-2 bg-accent"
+                  : "w-2 h-2 bg-white/40 hover:bg-white/60"
+              }`}
+              aria-label={`슬라이드 ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

@@ -41,10 +41,11 @@ export default function Contact() {
             <p className="text-accent font-bold text-sm tracking-widest uppercase mb-4">
               Contact Us
             </p>
-            <h2 className="text-4xl md:text-5xl font-black text-black leading-tight">
-              공연이 필요하신가요?
-              <br />
-              <span className="text-accent">지금 문의</span>하세요.
+            <h2 className="text-4xl md:text-5xl font-black text-black">
+              <span className="block">공연이 필요하신가요?</span>
+              <span className="block mt-2 md:mt-3">
+                <span className="text-accent">지금 문의</span>하세요.
+              </span>
             </h2>
             <p className="mt-6 text-gray-500 text-lg leading-relaxed">
               원하시는 공연 일정, 장소, 대상 인원 등을 알려주시면
@@ -73,7 +74,7 @@ export default function Contact() {
                 <div>
                   <p className="text-sm text-gray-400 font-medium">전화 문의</p>
                   <p className="text-xl font-black text-black">
-                    02-0000-0000
+                    010-7132-0348
                   </p>
                   <p className="text-sm text-gray-400">
                     평일 09:00 ~ 18:00 상담 가능
@@ -102,7 +103,7 @@ export default function Contact() {
                     이메일 문의
                   </p>
                   <p className="text-xl font-black text-black">
-                    info@gcompany.co.kr
+                    g_companyspace@naver.com
                   </p>
                 </div>
               </div>
@@ -132,7 +133,7 @@ export default function Contact() {
                 <div>
                   <p className="text-sm text-gray-400 font-medium">오시는 길</p>
                   <p className="text-lg font-bold text-black">
-                    서울특별시 OO구 OO로 00길 00
+                    서울시 도봉구 방학로 3길 13 스페이스도모
                   </p>
                 </div>
               </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navigation() {
@@ -46,14 +47,17 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div
-              className={`text-2xl font-extrabold tracking-tight transition-colors ${
-                scrolled ? "text-black" : "text-white"
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="G Company"
+              width={180}
+              height={180}
+              className={`h-20 w-auto transition-all duration-300 ${
+                scrolled ? "" : "brightness-0 invert"
               }`}
-            >
-              <span className="text-accent">G</span>COMPANY
-            </div>
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

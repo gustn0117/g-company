@@ -14,6 +14,9 @@ const config: Config = {
         "accent-light": "#F5E6C8",
         "gray-warm": "#F7F6F3",
       },
+      transitionDuration: {
+        "1500": "1500ms",
+      },
       fontFamily: {
         sans: [
           "Pretendard",

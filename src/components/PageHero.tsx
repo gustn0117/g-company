@@ -48,17 +48,16 @@ export default function PageHero({
         <p className="text-accent font-bold text-sm tracking-widest uppercase mb-4 animate-fade-in-up">
           {eyebrow}
         </p>
-        <h1 className="text-4xl md:text-6xl font-black leading-tight animate-fade-in-up delay-100">
-          {title}
+        <h1 className="text-4xl md:text-6xl font-black animate-fade-in-up delay-100">
+          <span className="block">{title}</span>
           {highlight && (
-            <>
-              <br />
+            <span className="block mt-2 md:mt-3">
               <span className="text-accent">{highlight}</span>
               {titleAfter && titleAfter}
-            </>
+            </span>
           )}
         </h1>
-        <p className="mt-6 text-lg md:text-xl text-white/50 max-w-2xl leading-relaxed animate-fade-in-up delay-200">
+        <p className="mt-8 text-lg md:text-xl text-white/50 max-w-2xl leading-relaxed animate-fade-in-up delay-200">
           {description}
         </p>
       </div>

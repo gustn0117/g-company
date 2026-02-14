@@ -32,12 +32,13 @@ export default function CTABanner({
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <h2 className="text-3xl md:text-5xl font-black leading-tight">
-          {title}
-          <br />
-          <span className="text-accent">{highlight}</span>하세요.
+        <h2 className="text-3xl md:text-5xl font-black">
+          <span className="block">{title}</span>
+          <span className="block mt-2 md:mt-3">
+            <span className="text-accent">{highlight}</span>하세요.
+          </span>
         </h2>
-        <p className="mt-6 text-white/50 text-lg max-w-xl mx-auto">
+        <p className="mt-8 text-white/50 text-lg max-w-xl mx-auto leading-relaxed">
           {description}
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
