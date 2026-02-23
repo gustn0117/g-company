@@ -1,4 +1,4 @@
-const BASE_URL = "https://g-company.vercel.app";
+const BASE_URL = "https://g-company.hsweb.pics";
 
 const shows = [
   {
