@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "지컴퍼니 | 찾아가는 뮤지컬 공연",
+  title: "지컴퍼니 | 뮤지컬 공연",
   description:
     "학교로, 기관으로 직접 찾아가는 맞춤형 뮤지컬 공연. 지컴퍼니가 특별한 무대를 만들어 드립니다.",
   verification: {

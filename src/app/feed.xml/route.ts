@@ -40,9 +40,9 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>지컴퍼니 - 찾아가는 뮤지컬 공연</title>
+    <title>지컴퍼니 - 뮤지컬 공연</title>
     <link>${BASE_URL}</link>
-    <description>지컴퍼니는 찾아가는 뮤지컬 공연 기업으로, 학교와 기관에 감동적인 무대 경험을 전달합니다.</description>
+    <description>지컴퍼니는 뮤지컬 공연 기업으로, 학교와 기관에 감동적인 무대 경험을 전달합니다.</description>
     <language>ko</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
