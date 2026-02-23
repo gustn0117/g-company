@@ -56,7 +56,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8 animate-fade-in-up">
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
             <span className="text-sm text-white/80 font-medium">
-              뮤지컬 공연
+              찾아가는 뮤지컬 공연
             </span>
           </div>
 
