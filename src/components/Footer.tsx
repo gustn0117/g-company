@@ -89,7 +89,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-5 text-white/40 text-sm leading-[1.8] max-w-sm">
-              지컴퍼니는 찾아가는 뮤지컬 공연 전문 기업으로, 학교와 기관에
+              지컴퍼니는 찾아가는 뮤지컬 공연 기업으로, 학교와 기관에
               감동적인 무대 경험을 전달합니다. 전국 어디든 찾아가 최고의 공연을
               선보이겠습니다.
             </p>
