@@ -1,11 +1,44 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { useInView } from "@/hooks/useInView";
 
 export default function ContactPage() {
   const formSection = useInView();
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    organization: "",
+    show: "",
+    preferred_date: "",
+    message: "",
+  });
+  const [submitState, setSubmitState] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name || !form.phone) return;
+    setSubmitState("submitting");
+    try {
+      const res = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSubmitState("success");
+        setForm({ name: "", phone: "", organization: "", show: "", preferred_date: "", message: "" });
+      } else {
+        setSubmitState("error");
+      }
+    } catch {
+      setSubmitState("error");
+    }
+  };
 
   return (
     <>
@@ -220,28 +253,51 @@ export default function ContactPage() {
                 <h3 className="text-xl font-black text-black mb-6">
                   공연 문의하기
                 </h3>
+                {submitState === "success" ? (
+                  <div className="text-center py-12">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h4 className="text-xl font-black text-black">문의가 접수되었습니다</h4>
+                    <p className="mt-2 text-gray-500 text-sm">빠른 시일 내에 연락드리겠습니다.</p>
+                    <button
+                      onClick={() => setSubmitState("idle")}
+                      className="mt-6 px-6 py-3 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors text-sm"
+                    >
+                      추가 문의하기
+                    </button>
+                  </div>
+                ) : (
                 <form
                   className="space-y-5"
-                  onSubmit={(e) => e.preventDefault()}
+                  onSubmit={handleSubmit}
                 >
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        담당자명
+                        담당자명 <span className="text-red-400">*</span>
                       </label>
                       <input
                         type="text"
                         placeholder="홍길동"
+                        value={form.name}
+                        onChange={(e) => setForm({ ...form, name: e.target.value })}
+                        required
                         className="w-full px-4 py-3 bg-white border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent transition-all outline-none"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        연락처
+                        연락처 <span className="text-red-400">*</span>
                       </label>
                       <input
                         type="tel"
                         placeholder="010-0000-0000"
+                        value={form.phone}
+                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                        required
                         className="w-full px-4 py-3 bg-white border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent transition-all outline-none"
                       />
                     </div>
@@ -254,6 +310,8 @@ export default function ContactPage() {
                     <input
                       type="text"
                       placeholder="OO중학교"
+                      value={form.organization}
+                      onChange={(e) => setForm({ ...form, organization: e.target.value })}
                       className="w-full px-4 py-3 bg-white border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent transition-all outline-none"
                     />
                   </div>
@@ -262,7 +320,11 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       관심 작품
                     </label>
-                    <select className="w-full px-4 py-3 bg-white border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent transition-all outline-none text-gray-500">
+                    <select
+                      value={form.show}
+                      onChange={(e) => setForm({ ...form, show: e.target.value })}
+                      className="w-full px-4 py-3 bg-white border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent transition-all outline-none text-gray-500"
+                    >
                       <option value="">선택해주세요</option>
                       <option value="키키키의 안전생활백서">키키키의 안전생활백서 (안전교육)</option>
                       <option value="2084 지구난민">2084 지구난민 (환경뮤지컬)</option>
@@ -278,6 +340,8 @@ export default function ContactPage() {
                     <input
                       type="text"
                       placeholder="2026년 O월 O일"
+                      value={form.preferred_date}
+                      onChange={(e) => setForm({ ...form, preferred_date: e.target.value })}
                       className="w-full px-4 py-3 bg-white border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent transition-all outline-none"
                     />
                   </div>
@@ -289,17 +353,25 @@ export default function ContactPage() {
                     <textarea
                       rows={4}
                       placeholder="공연 대상, 인원, 장소 등 자세한 내용을 적어주세요."
+                      value={form.message}
+                      onChange={(e) => setForm({ ...form, message: e.target.value })}
                       className="w-full px-4 py-3 bg-white border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent transition-all outline-none resize-none"
                     />
                   </div>
 
+                  {submitState === "error" && (
+                    <p className="text-red-500 text-sm">전송에 실패했습니다. 다시 시도해주세요.</p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full py-4 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors"
+                    disabled={submitState === "submitting"}
+                    className="w-full py-4 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors disabled:opacity-50"
                   >
-                    문의 보내기
+                    {submitState === "submitting" ? "전송 중..." : "문의 보내기"}
                   </button>
                 </form>
+                )}
               </div>
             </div>
           </div>
