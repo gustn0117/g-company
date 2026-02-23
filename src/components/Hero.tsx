@@ -64,9 +64,8 @@ export default function Hero() {
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight animate-fade-in-up delay-100">
             <span className="block">공연으로</span>
             <span className="block mt-2 md:mt-3">
-              <span className="text-accent">특별한 순간</span>을
+              <span className="text-accent">특별한 순간</span>을 만듭니다.
             </span>
-            <span className="block mt-2 md:mt-3">만듭니다.</span>
           </h1>
 
           {/* Sub text */}
