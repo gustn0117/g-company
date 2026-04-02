@@ -267,7 +267,7 @@ export default function EarthRefugee2084Page() {
             <div className="animate-fade-in-up delay-200">
               <div className="aspect-[3/4] bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/2084 지구난민 포스터 세로.png"
+                  src="/images/earth-refugee-2084-poster.png"
                   alt="2084 지구난민 공연 포스터"
                   fill
                   className="object-cover"

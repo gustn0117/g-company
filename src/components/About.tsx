@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const aboutImages = [
   { src: "/images/2.png", alt: "관객과 함께하는 지컴퍼니" },
-  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 002.png", alt: "더 페인팅 전체 캐스트" },
-  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 008.png", alt: "무지개 배경 속 배우" },
-  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 011.png", alt: "화려한 무대 위 배우들" },
-  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 005.png", alt: "역동적인 연기 장면" },
+  { src: "/images/gallery-002.png", alt: "더 페인팅 전체 캐스트" },
+  { src: "/images/gallery-008.png", alt: "무지개 배경 속 배우" },
+  { src: "/images/gallery-011.png", alt: "화려한 무대 위 배우들" },
+  { src: "/images/gallery-005.png", alt: "역동적인 연기 장면" },
 ];
 
 function useInView(threshold = 0.2) {

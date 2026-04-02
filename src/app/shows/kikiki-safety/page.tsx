@@ -265,7 +265,7 @@ export default function KikikiSafetyPage() {
             <div className="animate-fade-in-up delay-200">
               <div className="aspect-[3/4] bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/키키키 세로.png"
+                  src="/images/kikiki-poster.png"
                   alt="키키키의 안전생활백서 공연 포스터"
                   fill
                   className="object-cover"

@@ -299,7 +299,7 @@ export default function ThePaintingPage() {
             <div className="animate-fade-in-up delay-200">
               <div className="aspect-[3/4] bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/더페인팅 포스터1.png"
+                  src="/images/the-painting-poster.png"
                   alt="더 페인팅 공연 포스터"
                   fill
                   className="object-cover"
@@ -1567,18 +1567,18 @@ export default function ThePaintingPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 002.png", alt: "전체 캐스트 무대" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 003.png", alt: "영서의 솔로 장면" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 005.png", alt: "역동적인 장면" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 006.png", alt: "감동적인 스포트라이트" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 007.png", alt: "블루 조명 무대" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 008.png", alt: "레인보우 무대" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 010.png", alt: "두 배우의 대결" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 014.png", alt: "세 배우 대화 장면" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 019.png", alt: "역동적인 3인 장면" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 020.png", alt: "듀엣 장면" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 022.png", alt: "카페 장면" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 023.png", alt: "에이프런 장면" },
+              { src: "/images/gallery-002.png", alt: "전체 캐스트 무대" },
+              { src: "/images/gallery-003.png", alt: "영서의 솔로 장면" },
+              { src: "/images/gallery-005.png", alt: "역동적인 장면" },
+              { src: "/images/gallery-006.png", alt: "감동적인 스포트라이트" },
+              { src: "/images/gallery-007.png", alt: "블루 조명 무대" },
+              { src: "/images/gallery-008.png", alt: "레인보우 무대" },
+              { src: "/images/gallery-010.png", alt: "두 배우의 대결" },
+              { src: "/images/gallery-014.png", alt: "세 배우 대화 장면" },
+              { src: "/images/gallery-019.png", alt: "역동적인 3인 장면" },
+              { src: "/images/gallery-020.png", alt: "듀엣 장면" },
+              { src: "/images/gallery-022.png", alt: "카페 장면" },
+              { src: "/images/gallery-023.png", alt: "에이프런 장면" },
             ].map((img, i) => (
               <div
                 key={i}

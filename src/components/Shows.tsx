@@ -35,7 +35,7 @@ const shows = [
     desc: "K510 행성의 키키키와 지구 친구 비상구가 함께 떠나는 안전 모험! 즐거운 노래와 상황극으로 배우는 생활 속 안전 뮤지컬.",
     gradient: "from-[#3B5878] to-[#1E3450]",
     tag: "안전교육",
-    poster: "/images/키키키 세로.png",
+    poster: "/images/kikiki-poster.png",
   },
   {
     title: "2084 지구난민",
@@ -46,7 +46,7 @@ const shows = [
     desc: "황폐해진 2084년 미래 지구에서 생존을 위해 지구를 떠나는 과정을 통해, 기후 위기의 현실과 인간의 책임을 질문하는 창작뮤지컬.",
     gradient: "from-[#2D3654] to-[#151D30]",
     tag: "환경",
-    poster: "/images/2084 지구난민 포스터 세로.png",
+    poster: "/images/earth-refugee-2084-poster.png",
   },
   {
     title: "더 페인팅",
@@ -57,7 +57,7 @@ const shows = [
     desc: "체코 프라하에서의 실화를 바탕으로 한 창작 뮤지컬. 도전과 실패, 그리고 다시 일어서는 기업가정신을 무대 위에서 감동적으로 전달합니다.",
     gradient: "from-red-900 to-rose-900",
     tag: "기업가정신",
-    poster: "/images/더페인팅 포스터1.png",
+    poster: "/images/the-painting-poster.png",
   },
 ];
 

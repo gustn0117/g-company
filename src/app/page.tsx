@@ -268,14 +268,14 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {[
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 002.png", alt: "전체 캐스트" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 003.png", alt: "솔로 장면" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 006.png", alt: "감동적인 장면" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 007.png", alt: "블루 조명" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 008.png", alt: "레인보우 무대" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 010.png", alt: "두 배우" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 019.png", alt: "역동적인 장면" },
-              { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 023.png", alt: "코미디 장면" },
+              { src: "/images/gallery-002.png", alt: "전체 캐스트" },
+              { src: "/images/gallery-003.png", alt: "솔로 장면" },
+              { src: "/images/gallery-006.png", alt: "감동적인 장면" },
+              { src: "/images/gallery-007.png", alt: "블루 조명" },
+              { src: "/images/gallery-008.png", alt: "레인보우 무대" },
+              { src: "/images/gallery-010.png", alt: "두 배우" },
+              { src: "/images/gallery-019.png", alt: "역동적인 장면" },
+              { src: "/images/gallery-023.png", alt: "코미디 장면" },
             ].map((img, i) => (
               <div
                 key={i}

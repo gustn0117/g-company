@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const heroImages = [
-  { src: "/images/더페인팅사진.png", alt: "더 페인팅 공연 현장" },
+  { src: "/images/the-painting-photo.png", alt: "더 페인팅 공연 현장" },
   { src: "/images/2.png", alt: "관객과 함께하는 지컴퍼니" },
-  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 002.png", alt: "더 페인팅 전체 캐스트" },
-  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 007.png", alt: "블루 조명 속 무대" },
-  { src: "/images/KakaoTalk_Photo_2026-02-14-13-23-06 019.png", alt: "배우들의 열연" },
+  { src: "/images/gallery-002.png", alt: "더 페인팅 전체 캐스트" },
+  { src: "/images/gallery-007.png", alt: "블루 조명 속 무대" },
+  { src: "/images/gallery-019.png", alt: "배우들의 열연" },
 ];
 
 export default function Hero() {
