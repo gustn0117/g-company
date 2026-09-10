@@ -101,7 +101,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="group/icon w-11 h-11 bg-white/[0.06] border border-white/[0.08] rounded-xl flex items-center justify-center text-white/40 transition-all duration-300 hover:bg-accent hover:border-accent hover:text-black hover:scale-110 hover:shadow-[0_0_20px_rgba(212,168,83,0.25)]"
+                  className="group/icon w-11 h-11 bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-white/40 transition-all duration-300 hover:bg-accent hover:border-accent hover:text-black hover:scale-110 hover:shadow-[0_0_20px_rgba(212,168,83,0.25)]"
                 >
                   <span className="transition-transform duration-300 group-hover/icon:scale-110">
                     {social.icon}

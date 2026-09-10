@@ -79,7 +79,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/contact"
-              className={`px-5 py-2.5 text-sm font-semibold rounded-full transition-all ${
+              className={`px-5 py-2.5 text-sm font-semibold transition-all ${
                 scrolled
                   ? "bg-black text-white hover:bg-gray-800"
                   : "bg-white text-black hover:bg-gray-100"
@@ -123,7 +123,7 @@ export default function Navigation() {
 
         {/* Mobile Nav */}
         {mobileOpen && (
-          <div className="md:hidden bg-white rounded-2xl shadow-xl mt-2 p-6 animate-fade-in">
+          <div className="md:hidden bg-white shadow-xl mt-2 p-6 animate-fade-in">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -139,7 +139,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/contact"
-              className="block mt-4 text-center px-5 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition-colors"
+              className="block mt-4 text-center px-5 py-3 bg-black text-white font-semibold hover:bg-gray-800 transition-colors"
             >
               공연 예약
             </Link>

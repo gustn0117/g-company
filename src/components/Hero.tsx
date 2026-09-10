@@ -52,16 +52,8 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full">
         <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8 animate-fade-in-up">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-sm text-white/80 font-medium">
-              찾아가는 뮤지컬 공연
-            </span>
-          </div>
-
           {/* Main heading */}
-          <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight animate-fade-in-up delay-100">
+          <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight animate-fade-in-up">
             <span className="block">공연으로</span>
             <span className="block mt-2 md:mt-3">
               <span className="text-accent">특별한 순간</span>을 만듭니다.
@@ -79,7 +71,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mt-10 animate-fade-in-up delay-300">
             <Link
               href="/services"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-accent hover:text-black transition-all duration-300 group"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold hover:bg-accent hover:text-black transition-all duration-300 group"
             >
               공연 알아보기
               <svg
@@ -98,7 +90,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold hover:bg-white/10 transition-all duration-300"
             >
               공연 문의하기
             </Link>
@@ -111,7 +103,7 @@ export default function Hero() {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`transition-all duration-300 rounded-full ${
+              className={`transition-all duration-300 ${
                 index === currentIndex
                   ? "w-8 h-2 bg-accent"
                   : "w-2 h-2 bg-white/40 hover:bg-white/60"

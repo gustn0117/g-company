@@ -99,7 +99,7 @@ export default function Shows() {
           {shows.map((show, index) => (
             <div
               key={show.title}
-              className={`group relative rounded-3xl overflow-hidden transition-all duration-700 hover:shadow-2xl ${
+              className={`group relative overflow-hidden transition-all duration-700 hover:shadow-2xl ${
                 inView
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"
@@ -122,14 +122,14 @@ export default function Shows() {
                 </div>
 
                 {/* Background decoration */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+                <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 translate-y-1/2 -translate-x-1/2" />
 
                 {/* Content area */}
                 <div className="relative md:col-span-3 p-8 md:p-10 flex flex-col justify-between">
                   <div>
                     {/* Tag */}
-                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-bold rounded-full">
+                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-bold">
                       {show.tag}
                     </span>
 
@@ -194,7 +194,7 @@ export default function Shows() {
                   <div className="flex flex-col sm:flex-row md:flex-col gap-4">
                     <Link
                       href={`/shows/${show.slug}`}
-                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black text-sm font-bold rounded-full hover:bg-accent hover:text-white transition-all group/btn"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black text-sm font-bold hover:bg-accent hover:text-white transition-all group/btn"
                     >
                       상세 보기
                       <svg
@@ -213,7 +213,7 @@ export default function Shows() {
                     </Link>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/30 text-white text-sm font-bold rounded-full hover:bg-white/10 transition-all group/btn"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/30 text-white text-sm font-bold hover:bg-white/10 transition-all group/btn"
                     >
                       문의하기
                       <svg

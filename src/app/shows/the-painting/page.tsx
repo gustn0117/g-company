@@ -197,23 +197,23 @@ export default function ThePaintingPage() {
       <section className="relative min-h-[600px] pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-red-900 via-rose-900 to-red-950 text-white overflow-hidden">
         {/* --- decorative blobs --- */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-red-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-20 w-80 h-80 bg-rose-500/10 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-500/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 right-20 w-96 h-96 bg-red-500/10 blur-3xl" />
+          <div className="absolute bottom-10 left-20 w-80 h-80 bg-rose-500/10 blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-500/5 blur-3xl" />
 
           {/* Paint splash decorative elements */}
-          <div className="absolute top-[15%] right-[10%] w-48 h-24 bg-red-500/8 rounded-[40px] rotate-[25deg] blur-sm" />
-          <div className="absolute top-[25%] right-[25%] w-32 h-16 bg-rose-400/10 rounded-[30px] -rotate-[15deg] blur-sm" />
-          <div className="absolute bottom-[30%] left-[5%] w-56 h-20 bg-red-600/6 rounded-[50px] rotate-[40deg] blur-sm" />
-          <div className="absolute top-[10%] left-[30%] w-40 h-14 bg-rose-500/8 rounded-[35px] -rotate-[30deg] blur-sm" />
-          <div className="absolute bottom-[20%] right-[15%] w-36 h-18 bg-red-400/8 rounded-[45px] rotate-[55deg] blur-sm" />
-          <div className="absolute top-[60%] left-[15%] w-44 h-16 bg-red-400/6 rounded-[40px] -rotate-[20deg] blur-sm" />
+          <div className="absolute top-[15%] right-[10%] w-48 h-24 bg-red-500/8-[40px] rotate-[25deg] blur-sm" />
+          <div className="absolute top-[25%] right-[25%] w-32 h-16 bg-rose-400/10-[30px] -rotate-[15deg] blur-sm" />
+          <div className="absolute bottom-[30%] left-[5%] w-56 h-20 bg-red-600/6-[50px] rotate-[40deg] blur-sm" />
+          <div className="absolute top-[10%] left-[30%] w-40 h-14 bg-rose-500/8-[35px] -rotate-[30deg] blur-sm" />
+          <div className="absolute bottom-[20%] right-[15%] w-36 h-18 bg-red-400/8-[45px] rotate-[55deg] blur-sm" />
+          <div className="absolute top-[60%] left-[15%] w-44 h-16 bg-red-400/6-[40px] -rotate-[20deg] blur-sm" />
 
           {/* Floating brush-stroke shapes */}
-          <div className="absolute top-[8%] left-[60%] w-64 h-8 bg-gradient-to-r from-red-400/15 to-transparent rounded-full rotate-[12deg]" />
-          <div className="absolute top-[45%] right-[5%] w-48 h-6 bg-gradient-to-l from-rose-400/12 to-transparent rounded-full -rotate-[8deg]" />
-          <div className="absolute bottom-[35%] left-[8%] w-52 h-7 bg-gradient-to-r from-red-400/10 to-transparent rounded-full rotate-[20deg]" />
-          <div className="absolute top-[70%] left-[40%] w-40 h-5 bg-gradient-to-r from-rose-300/10 to-transparent rounded-full -rotate-[5deg]" />
+          <div className="absolute top-[8%] left-[60%] w-64 h-8 bg-gradient-to-r from-red-400/15 to-transparent rotate-[12deg]" />
+          <div className="absolute top-[45%] right-[5%] w-48 h-6 bg-gradient-to-l from-rose-400/12 to-transparent -rotate-[8deg]" />
+          <div className="absolute bottom-[35%] left-[8%] w-52 h-7 bg-gradient-to-r from-red-400/10 to-transparent rotate-[20deg]" />
+          <div className="absolute top-[70%] left-[40%] w-40 h-5 bg-gradient-to-r from-rose-300/10 to-transparent -rotate-[5deg]" />
 
           {/* Grid pattern */}
           <div
@@ -243,13 +243,13 @@ export default function ThePaintingPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6 animate-fade-in-up">
-                <span className="inline-block px-3 py-1 bg-red-500/20 text-red-300 text-xs font-bold rounded-full">
+                <span className="inline-block px-3 py-1 bg-red-500/20 text-red-300 text-xs font-bold">
                   기업가정신
                 </span>
-                <span className="inline-block px-3 py-1 bg-white/10 text-white/70 text-xs font-bold rounded-full">
+                <span className="inline-block px-3 py-1 bg-white/10 text-white/70 text-xs font-bold">
                   창작뮤지컬
                 </span>
-                <span className="inline-block px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded-full">
+                <span className="inline-block px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold">
                   실화 기반
                 </span>
               </div>
@@ -269,7 +269,7 @@ export default function ThePaintingPage() {
               <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in-up delay-300">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-red-500 text-white font-bold rounded-full hover:bg-red-400 transition-all duration-300 group"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-red-500 text-white font-bold hover:bg-red-400 transition-all duration-300 group"
                 >
                   공연 문의하기
                   <svg
@@ -288,7 +288,7 @@ export default function ThePaintingPage() {
                 </Link>
                 <Link
                   href="/shows"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold hover:bg-white/10 transition-all duration-300"
                 >
                   다른 작품 보기
                 </Link>
@@ -297,7 +297,7 @@ export default function ThePaintingPage() {
 
             {/* Poster Image */}
             <div className="animate-fade-in-up delay-200">
-              <div className="aspect-[3/4] bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl">
+              <div className="aspect-[3/4] bg-white/5 backdrop-blur-sm border border-white/10 relative overflow-hidden shadow-2xl">
                 <Image
                   src="/images/the-painting-poster.png"
                   alt="더 페인팅 공연 포스터"
@@ -336,7 +336,7 @@ export default function ThePaintingPage() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="bg-white/[0.07] backdrop-blur-md border border-white/[0.12] rounded-2xl px-5 py-4 text-center"
+                className="bg-white/[0.07] backdrop-blur-md border border-white/[0.12] px-5 py-4 text-center"
               >
                 <div className="flex justify-center">
                   <SvgIcon
@@ -423,7 +423,7 @@ export default function ThePaintingPage() {
             ].map((item, i) => (
               <div
                 key={item.label}
-                className="relative bg-gray-warm rounded-2xl p-5 md:p-6 group hover:shadow-lg transition-all duration-300 overflow-hidden"
+                className="relative bg-gray-warm p-5 md:p-6 group hover:shadow-lg transition-all duration-300 overflow-hidden"
                 style={{ transitionDelay: `${i * 60 + 150}ms` }}
               >
                 {/* Accent top line */}
@@ -444,15 +444,15 @@ export default function ThePaintingPage() {
 
           {/* 교육 방향의 변화 - dramatic design */}
           <div
-            className={`relative bg-gradient-to-br from-rose-50 via-red-50/50 to-white rounded-3xl p-8 md:p-12 overflow-hidden transition-all duration-700 delay-200 ${
+            className={`relative bg-gradient-to-br from-rose-50 via-red-50/50 to-white p-8 md:p-12 overflow-hidden transition-all duration-700 delay-200 ${
               overviewSection.inView
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
             {/* subtle bg decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-red-200/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-rose-200/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-red-200/20 blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-rose-200/20 blur-3xl pointer-events-none" />
 
             <div className="relative">
               <p className="text-red-600 font-bold text-xs tracking-widest uppercase mb-2">
@@ -482,7 +482,7 @@ export default function ThePaintingPage() {
                   <div className="absolute -top-4 -left-2 text-7xl font-black text-red-300/30 leading-none select-none">
                     &ldquo;
                   </div>
-                  <div className="bg-white rounded-2xl p-8 shadow-lg border border-red-100/50 relative">
+                  <div className="bg-white p-8 shadow-lg border border-red-100/50 relative">
                     <p className="text-lg md:text-xl font-black text-black leading-relaxed">
                       스스로 선택하고 길을 만들어갈 수 있는 역량,
                     </p>
@@ -517,10 +517,10 @@ export default function ThePaintingPage() {
           <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/30 to-transparent" />
 
           {/* Spotlight effects */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-red-500/[0.04] rounded-full blur-[100px]" />
-          <div className="absolute top-10 left-10 w-80 h-80 bg-red-500/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-rose-500/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-red-500/[0.03] rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-red-500/[0.04] blur-[100px]" />
+          <div className="absolute top-10 left-10 w-80 h-80 bg-red-500/5 blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-rose-500/5 blur-3xl" />
+          <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-red-500/[0.03] blur-3xl" />
 
           {/* Film grain texture */}
           <div
@@ -568,7 +568,7 @@ export default function ThePaintingPage() {
             {/* ACT label */}
             <div className="flex items-center gap-4 mb-8">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-red-500/20 border border-red-400/30 flex items-center justify-center">
+                <div className="w-10 h-10 bg-red-500/20 border border-red-400/30 flex items-center justify-center">
                   <span className="text-red-300 font-black text-xs">I</span>
                 </div>
                 <div>
@@ -590,13 +590,13 @@ export default function ThePaintingPage() {
                 &ldquo;
               </div>
 
-              <div className="relative bg-gradient-to-br from-red-500/10 via-rose-500/5 to-transparent rounded-3xl p-8 md:p-12 border border-red-400/10 backdrop-blur-sm">
+              <div className="relative bg-gradient-to-br from-red-500/10 via-rose-500/5 to-transparent p-8 md:p-12 border border-red-400/10 backdrop-blur-sm">
                 {/* Spotlight glow on the card */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-red-400/40 to-transparent rounded-full" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-red-400/40 to-transparent" />
 
                 <div className="flex items-start gap-5">
                   {/* Character avatar */}
-                  <div className="hidden md:flex flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-red-500/30 to-rose-500/30 border border-red-400/20 items-center justify-center">
+                  <div className="hidden md:flex flex-shrink-0 w-14 h-14 bg-gradient-to-br from-red-500/30 to-rose-500/30 border border-red-400/20 items-center justify-center">
                     <span className="text-red-300 font-black text-lg">
                       영
                     </span>
@@ -630,9 +630,9 @@ export default function ThePaintingPage() {
               }`}
             >
               {/* Timeline dot */}
-              <div className="absolute left-[-9px] top-4 w-4 h-4 rounded-full bg-red-950 border-2 border-red-500/40" />
+              <div className="absolute left-[-9px] top-4 w-4 h-4 bg-red-950 border-2 border-red-500/40" />
 
-              <div className="bg-white/[0.04] rounded-2xl p-6 md:p-8 border border-white/[0.06] hover:border-white/[0.12] transition-colors duration-300">
+              <div className="bg-white/[0.04] p-6 md:p-8 border border-white/[0.06] hover:border-white/[0.12] transition-colors duration-300">
                 <div className="flex items-center gap-2 mb-3">
                   <SvgIcon
                     d={iconPaths.palette}
@@ -664,7 +664,7 @@ export default function ThePaintingPage() {
           >
             <div className="flex flex-col items-center gap-2">
               <div className="w-[1px] h-12 bg-gradient-to-b from-red-500/30 to-red-500/10" />
-              <div className="w-8 h-8 rounded-full bg-red-500/10 border border-red-400/20 flex items-center justify-center">
+              <div className="w-8 h-8 bg-red-500/10 border border-red-400/20 flex items-center justify-center">
                 <svg
                   className="w-4 h-4 text-red-400/60"
                   fill="none"
@@ -694,7 +694,7 @@ export default function ThePaintingPage() {
             {/* ACT label */}
             <div className="flex items-center gap-4 mb-8">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-rose-500/20 border border-rose-400/30 flex items-center justify-center">
+                <div className="w-10 h-10 bg-rose-500/20 border border-rose-400/30 flex items-center justify-center">
                   <span className="text-rose-300 font-black text-xs">
                     II
                   </span>
@@ -714,9 +714,9 @@ export default function ThePaintingPage() {
             {/* Decision scene */}
             <div className="relative ml-4 md:ml-12 pl-8 border-l-2 border-rose-500/20 mb-10">
               {/* Timeline dot */}
-              <div className="absolute left-[-9px] top-4 w-4 h-4 rounded-full bg-red-950 border-2 border-rose-500/40" />
+              <div className="absolute left-[-9px] top-4 w-4 h-4 bg-red-950 border-2 border-rose-500/40" />
 
-              <div className="bg-white/[0.04] rounded-2xl p-6 md:p-8 border border-white/[0.06] hover:border-white/[0.12] transition-colors duration-300">
+              <div className="bg-white/[0.04] p-6 md:p-8 border border-white/[0.06] hover:border-white/[0.12] transition-colors duration-300">
                 <div className="flex items-center gap-2 mb-3">
                   <SvgIcon
                     d={iconPaths.plane}
@@ -740,9 +740,9 @@ export default function ThePaintingPage() {
             {/* Departure scene - with dramatic Prague reveal */}
             <div className="relative ml-4 md:ml-12 pl-8 border-l-2 border-rose-500/20">
               {/* Timeline dot - larger for key moment */}
-              <div className="absolute left-[-11px] top-6 w-5 h-5 rounded-full bg-gradient-to-br from-red-500/60 to-rose-500/60 border-2 border-red-950 shadow-lg shadow-red-500/20" />
+              <div className="absolute left-[-11px] top-6 w-5 h-5 bg-gradient-to-br from-red-500/60 to-rose-500/60 border-2 border-red-950 shadow-lg shadow-red-500/20" />
 
-              <div className="relative bg-gradient-to-br from-rose-500/10 via-red-500/5 to-transparent rounded-3xl p-6 md:p-8 border border-rose-400/15 overflow-hidden">
+              <div className="relative bg-gradient-to-br from-rose-500/10 via-red-500/5 to-transparent p-6 md:p-8 border border-rose-400/15 overflow-hidden">
                 {/* Location reveal decoration */}
                 <div className="absolute top-3 right-4 md:right-6">
                   <div className="flex items-center gap-2 text-white/20">
@@ -759,12 +759,12 @@ export default function ThePaintingPage() {
                 <div className="flex items-start gap-5">
                   {/* Character avatars: sisters */}
                   <div className="hidden md:flex flex-col gap-2 flex-shrink-0">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500/30 to-indigo-500/30 border border-blue-400/20 flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500/30 to-indigo-500/30 border border-blue-400/20 flex items-center justify-center">
                       <span className="text-blue-300 font-black text-xs">
                         영
                       </span>
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500/30 to-rose-500/30 border border-red-400/20 flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-red-500/30 to-rose-500/30 border border-red-400/20 flex items-center justify-center">
                       <span className="text-red-300 font-black text-xs">
                         영
                       </span>
@@ -806,11 +806,11 @@ export default function ThePaintingPage() {
             <div className="flex flex-col items-center gap-3">
               <div className="w-[1px] h-8 bg-gradient-to-b from-transparent to-red-500/20" />
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-red-500/30" />
-                <div className="w-3 h-3 rounded-full bg-red-500/40" />
-                <div className="w-4 h-4 rounded-full bg-red-500/50" />
-                <div className="w-3 h-3 rounded-full bg-red-500/40" />
-                <div className="w-2 h-2 rounded-full bg-red-500/30" />
+                <div className="w-2 h-2 bg-red-500/30" />
+                <div className="w-3 h-3 bg-red-500/40" />
+                <div className="w-4 h-4 bg-red-500/50" />
+                <div className="w-3 h-3 bg-red-500/40" />
+                <div className="w-2 h-2 bg-red-500/30" />
               </div>
               <div className="w-[1px] h-8 bg-gradient-to-b from-red-500/20 to-transparent" />
             </div>
@@ -827,7 +827,7 @@ export default function ThePaintingPage() {
             {/* ACT label */}
             <div className="flex items-center gap-4 mb-8">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500/30 to-amber-500/30 border border-red-400/30 flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-red-500/30 to-amber-500/30 border border-red-400/30 flex items-center justify-center">
                   <SvgIcon
                     d={iconPaths.sparkles}
                     className="w-5 h-5 text-red-300"
@@ -848,19 +848,19 @@ export default function ThePaintingPage() {
             {/* Grand climactic reveal card */}
             <div className="relative">
               {/* Outer glow */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 via-rose-500/20 to-red-500/20 rounded-[28px] blur-sm" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 via-rose-500/20 to-red-500/20-[28px] blur-sm" />
 
               {/* Gradient border wrapper */}
-              <div className="relative rounded-3xl p-[2px] bg-gradient-to-r from-red-500 via-rose-500 to-red-500">
-                <div className="bg-gradient-to-br from-red-950 via-red-950 to-red-950 rounded-[22px] p-10 md:p-14 text-center relative overflow-hidden">
+              <div className="relative p-[2px] bg-gradient-to-r from-red-500 via-rose-500 to-red-500">
+                <div className="bg-gradient-to-br from-red-950 via-red-950 to-red-950-[22px] p-10 md:p-14 text-center relative overflow-hidden">
                   {/* Inner spotlight */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-40 bg-red-500/[0.06] rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-40 bg-red-500/[0.06] blur-3xl pointer-events-none" />
 
                   {/* Decorative stage lights */}
-                  <div className="absolute top-4 left-8 w-2 h-2 rounded-full bg-red-400/30" />
-                  <div className="absolute top-4 right-8 w-2 h-2 rounded-full bg-red-400/30" />
-                  <div className="absolute top-6 left-16 w-1.5 h-1.5 rounded-full bg-rose-400/20" />
-                  <div className="absolute top-6 right-16 w-1.5 h-1.5 rounded-full bg-rose-400/20" />
+                  <div className="absolute top-4 left-8 w-2 h-2 bg-red-400/30" />
+                  <div className="absolute top-4 right-8 w-2 h-2 bg-red-400/30" />
+                  <div className="absolute top-6 left-16 w-1.5 h-1.5 bg-rose-400/20" />
+                  <div className="absolute top-6 right-16 w-1.5 h-1.5 bg-rose-400/20" />
 
                   <div className="relative z-10">
                     <SvgIcon
@@ -887,9 +887,9 @@ export default function ThePaintingPage() {
                     {/* Underline decoration */}
                     <div className="flex justify-center mt-8">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-[2px] bg-red-500/40 rounded-full" />
-                        <div className="w-3 h-3 rounded-full bg-gradient-to-br from-red-500/40 to-rose-500/40" />
-                        <div className="w-8 h-[2px] bg-rose-500/40 rounded-full" />
+                        <div className="w-8 h-[2px] bg-red-500/40" />
+                        <div className="w-3 h-3 bg-gradient-to-br from-red-500/40 to-rose-500/40" />
+                        <div className="w-8 h-[2px] bg-rose-500/40" />
                       </div>
                     </div>
 
@@ -937,7 +937,7 @@ export default function ThePaintingPage() {
                 }`}
               >
                 <div
-                  className={`relative bg-gradient-to-br ${char.color} rounded-3xl p-8 md:p-12 overflow-hidden`}
+                  className={`relative bg-gradient-to-br ${char.color} p-8 md:p-12 overflow-hidden`}
                 >
                   {/* Large watermark initial */}
                   <div className="absolute -right-4 md:right-8 -top-4 md:top-1/2 md:-translate-y-1/2 text-[180px] md:text-[280px] font-black text-red-500/[0.07] leading-none select-none pointer-events-none">
@@ -946,13 +946,13 @@ export default function ThePaintingPage() {
 
                   {/* Accent line */}
                   <div
-                    className={`w-16 h-1.5 ${char.accentColor} rounded-full mb-6`}
+                    className={`w-16 h-1.5 ${char.accentColor} mb-6`}
                   />
 
                   <div className="relative z-10 grid md:grid-cols-[1fr_auto] gap-8 items-center">
                     <div>
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="inline-block px-3 py-1 bg-red-500/20 text-red-700 text-xs font-bold rounded-full">
+                        <span className="inline-block px-3 py-1 bg-red-500/20 text-red-700 text-xs font-bold">
                           주인공
                         </span>
                       </div>
@@ -967,7 +967,7 @@ export default function ThePaintingPage() {
                         {char.tags.map((tag) => (
                           <span
                             key={tag}
-                            className={`px-3 py-1.5 ${char.tagColor} text-xs font-bold rounded-full`}
+                            className={`px-3 py-1.5 ${char.tagColor} text-xs font-bold`}
                           >
                             #{tag}
                           </span>
@@ -980,7 +980,7 @@ export default function ThePaintingPage() {
                     </div>
 
                     {/* Character avatar placeholder */}
-                    <div className="hidden md:flex w-32 h-32 rounded-full bg-white/50 items-center justify-center">
+                    <div className="hidden md:flex w-32 h-32 bg-white/50 items-center justify-center">
                       <span className="text-5xl font-black text-red-400/60">
                         {char.initial}
                       </span>
@@ -997,7 +997,7 @@ export default function ThePaintingPage() {
               .map((char, i) => (
                 <div
                   key={char.name}
-                  className={`relative bg-gradient-to-br ${char.color} rounded-3xl p-6 md:p-8 hover:shadow-xl transition-all duration-700 overflow-hidden group ${
+                  className={`relative bg-gradient-to-br ${char.color} p-6 md:p-8 hover:shadow-xl transition-all duration-700 overflow-hidden group ${
                     characterSection.inView
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-8"
@@ -1011,7 +1011,7 @@ export default function ThePaintingPage() {
 
                   {/* Accent line */}
                   <div
-                    className={`w-10 h-1 ${char.accentColor} rounded-full mb-5`}
+                    className={`w-10 h-1 ${char.accentColor} mb-5`}
                   />
 
                   <div className="relative z-10">
@@ -1026,7 +1026,7 @@ export default function ThePaintingPage() {
                       {char.tags.map((tag) => (
                         <span
                           key={tag}
-                          className={`px-2.5 py-1 ${char.tagColor} text-xs font-bold rounded-full`}
+                          className={`px-2.5 py-1 ${char.tagColor} text-xs font-bold`}
                         >
                           #{tag}
                         </span>
@@ -1075,7 +1075,7 @@ export default function ThePaintingPage() {
             {entrepreneurKeywords.map((item, i) => (
               <div
                 key={item.title}
-                className={`relative z-10 bg-gradient-to-br from-white to-gray-warm rounded-2xl p-6 md:p-8 text-center hover:shadow-xl border border-gray-100 transition-all duration-700 overflow-hidden group ${
+                className={`relative z-10 bg-gradient-to-br from-white to-gray-warm p-6 md:p-8 text-center hover:shadow-xl border border-gray-100 transition-all duration-700 overflow-hidden group ${
                   keywordsSection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -1111,7 +1111,7 @@ export default function ThePaintingPage() {
 
                 {/* Connecting arrow (visible on lg+ except last) */}
                 {i < entrepreneurKeywords.length - 1 && (
-                  <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-6 h-6 bg-accent/20 rounded-full items-center justify-center">
+                  <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-6 h-6 bg-accent/20 items-center justify-center">
                     <svg
                       className="w-3 h-3 text-accent"
                       fill="none"
@@ -1166,7 +1166,7 @@ export default function ThePaintingPage() {
             {coreCompetencies.map((item, i) => (
               <div
                 key={item.title}
-                className={`relative bg-gray-warm rounded-2xl p-6 md:p-8 text-center hover:shadow-xl transition-all duration-700 group overflow-hidden ${
+                className={`relative bg-gray-warm p-6 md:p-8 text-center hover:shadow-xl transition-all duration-700 group overflow-hidden ${
                   competencySection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -1175,7 +1175,7 @@ export default function ThePaintingPage() {
               >
                 {/* Colored ring background */}
                 <div
-                  className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-gradient-to-br ${item.color} opacity-[0.08] group-hover:opacity-[0.15] group-hover:scale-125 transition-all duration-500`}
+                  className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-gradient-to-br ${item.color} opacity-[0.08] group-hover:opacity-[0.15] group-hover:scale-125 transition-all duration-500`}
                 />
 
                 {/* Progress bar visual */}
@@ -1191,9 +1191,9 @@ export default function ThePaintingPage() {
                   </h3>
 
                   {/* Decorative bar */}
-                  <div className="mt-3 mx-auto w-16 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                  <div className="mt-3 mx-auto w-16 h-1.5 bg-gray-200 overflow-hidden">
                     <div
-                      className={`h-full bg-gradient-to-r ${item.color} rounded-full transition-all duration-1000 ease-out ${
+                      className={`h-full bg-gradient-to-r ${item.color} transition-all duration-1000 ease-out ${
                         competencySection.inView ? "w-full" : "w-0"
                       }`}
                       style={{ transitionDelay: `${i * 100 + 500}ms` }}
@@ -1206,17 +1206,17 @@ export default function ThePaintingPage() {
 
           {/* 고교학점제 적합 이유 - visually distinct callout */}
           <div
-            className={`mt-16 relative bg-gradient-to-br from-accent/5 to-amber-50 border border-accent/20 rounded-3xl p-8 md:p-10 max-w-4xl mx-auto overflow-hidden transition-all duration-700 delay-300 ${
+            className={`mt-16 relative bg-gradient-to-br from-accent/5 to-amber-50 border border-accent/20 p-8 md:p-10 max-w-4xl mx-auto overflow-hidden transition-all duration-700 delay-300 ${
               competencySection.inView
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="absolute top-0 right-0 w-48 h-48 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-48 h-48 bg-accent/5 blur-3xl pointer-events-none" />
 
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                <div className="w-10 h-10 bg-accent/10 flex items-center justify-center">
                   <svg
                     className="w-5 h-5 text-accent"
                     fill="none"
@@ -1245,7 +1245,7 @@ export default function ThePaintingPage() {
                   "정서적 울림 + 교육적 메시지를 동시에 전달하는 진로 콘텐츠",
                 ].map((reason, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-5 h-5 bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <svg
                         className="w-3 h-3 text-accent"
                         fill="none"
@@ -1278,8 +1278,8 @@ export default function ThePaintingPage() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-rose-500/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-red-500/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-rose-500/5 blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-red-500/5 blur-3xl" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -1338,14 +1338,14 @@ export default function ThePaintingPage() {
                 >
                   {/* Step number circle */}
                   <div className="flex justify-center mb-6">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-lg shadow-red-500/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-lg shadow-red-500/20">
                       <span className="text-white font-black text-sm">
                         {item.num}
                       </span>
                     </div>
                   </div>
 
-                  <div className="bg-white/[0.06] backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/[0.15] transition-all duration-300">
+                  <div className="bg-white/[0.06] backdrop-blur-sm p-6 md:p-8 border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/[0.15] transition-all duration-300">
                     <h3 className="font-black text-white mb-3 text-center text-lg">
                       {item.title}
                     </h3>
@@ -1366,9 +1366,9 @@ export default function ThePaintingPage() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="relative rounded-3xl p-[1px] bg-gradient-to-r from-red-500/50 via-rose-500/50 to-red-500/50">
-              <div className="bg-red-950/90 backdrop-blur-sm rounded-3xl p-8 md:p-10 text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-300 text-xs font-bold mb-5">
+            <div className="relative p-[1px] bg-gradient-to-r from-red-500/50 via-rose-500/50 to-red-500/50">
+              <div className="bg-red-950/90 backdrop-blur-sm p-8 md:p-10 text-center">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 text-red-300 text-xs font-bold mb-5">
                   <svg
                     className="w-4 h-4"
                     fill="none"
@@ -1427,7 +1427,7 @@ export default function ThePaintingPage() {
             }`}
           >
             {/* 극장 공연 */}
-            <div className="relative bg-gray-warm rounded-3xl md:rounded-r-none p-8 md:p-10 overflow-hidden">
+            <div className="relative bg-gray-warm p-8 md:p-10 overflow-hidden">
               {/* Gradient top border */}
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-500 to-rose-500" />
               <SvgIcon
@@ -1444,7 +1444,7 @@ export default function ThePaintingPage() {
                   "전문 공연 제작 스태프 참여로 높은 무대 완성도",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-500 flex-shrink-0 mt-2" />
+                    <div className="w-1.5 h-1.5 bg-red-500 flex-shrink-0 mt-2" />
                     <span className="text-[15px] text-gray-600">{item}</span>
                   </div>
                 ))}
@@ -1453,18 +1453,18 @@ export default function ThePaintingPage() {
 
             {/* VS Divider */}
             <div className="hidden md:flex flex-col items-center justify-center px-4 z-10 -mx-4">
-              <div className="w-14 h-14 rounded-full bg-accent shadow-lg flex items-center justify-center">
+              <div className="w-14 h-14 bg-accent shadow-lg flex items-center justify-center">
                 <span className="text-white font-black text-sm">VS</span>
               </div>
             </div>
             <div className="flex md:hidden items-center justify-center py-4">
-              <div className="w-12 h-12 rounded-full bg-accent shadow-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-accent shadow-lg flex items-center justify-center">
                 <span className="text-white font-black text-xs">VS</span>
               </div>
             </div>
 
             {/* 찾아가는 공연 */}
-            <div className="relative bg-gray-warm rounded-3xl md:rounded-l-none p-8 md:p-10 overflow-hidden">
+            <div className="relative bg-gray-warm p-8 md:p-10 overflow-hidden">
               {/* Gradient top border */}
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-500 to-orange-500" />
               <SvgIcon
@@ -1481,7 +1481,7 @@ export default function ThePaintingPage() {
                   "공연 후 관객 참여형 토크 및 토론 프로그램 가능",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0 mt-2" />
+                    <div className="w-1.5 h-1.5 bg-amber-500 flex-shrink-0 mt-2" />
                     <span className="text-[15px] text-gray-600">{item}</span>
                   </div>
                 ))}
@@ -1519,14 +1519,14 @@ export default function ThePaintingPage() {
                   <div key={item.year} className="relative">
                     {/* Timeline dot */}
                     <div className="hidden md:flex items-center justify-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-accent/10 border-4 border-white shadow flex items-center justify-center relative z-10">
+                      <div className="w-12 h-12 bg-accent/10 border-4 border-white shadow flex items-center justify-center relative z-10">
                         <span className="text-accent font-black text-xs">
                           {item.year}
                         </span>
                       </div>
                     </div>
 
-                    <div className="bg-gray-warm rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
+                    <div className="bg-gray-warm p-6 hover:shadow-lg transition-all duration-300">
                       <span className="md:hidden text-2xl font-black text-accent">
                         {item.year}
                       </span>
@@ -1582,7 +1582,7 @@ export default function ThePaintingPage() {
             ].map((img, i) => (
               <div
                 key={i}
-                className={`relative aspect-[4/3] rounded-2xl overflow-hidden group hover:shadow-xl transition-all duration-700 ${
+                className={`relative aspect-[4/3] overflow-hidden group hover:shadow-xl transition-all duration-700 ${
                   gallerySection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -1619,7 +1619,7 @@ export default function ThePaintingPage() {
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 md:hidden">
         <Link
           href="/contact"
-          className="inline-flex items-center gap-2 px-6 py-3.5 bg-red-500 text-white font-bold rounded-full shadow-2xl shadow-red-500/30 hover:bg-red-400 transition-all duration-300"
+          className="inline-flex items-center gap-2 px-6 py-3.5 bg-red-500 text-white font-bold shadow-2xl shadow-red-500/30 hover:bg-red-400 transition-all duration-300"
         >
           <svg
             className="w-4 h-4"

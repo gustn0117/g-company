@@ -37,7 +37,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: #ccc;
-  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

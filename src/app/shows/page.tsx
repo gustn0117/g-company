@@ -75,7 +75,7 @@ export default function ShowsPage() {
             {shows.map((show, index) => (
               <div
                 key={show.title}
-                className={`grid md:grid-cols-2 gap-0 rounded-3xl overflow-hidden transition-all duration-700 hover:shadow-2xl ${
+                className={`grid md:grid-cols-2 gap-0 overflow-hidden transition-all duration-700 hover:shadow-2xl ${
                   showsSection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-12"
@@ -95,11 +95,11 @@ export default function ShowsPage() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-                  <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 -translate-y-1/2 translate-x-1/2" />
+                  <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 translate-y-1/2 -translate-x-1/2" />
 
                   <div className="relative">
-                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-bold rounded-full">
+                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-bold">
                       {show.tag}
                     </span>
                     <h3 className="text-4xl md:text-5xl font-black mt-6 text-white">
@@ -159,7 +159,7 @@ export default function ShowsPage() {
                     <div className="mt-6 space-y-3">
                       {show.highlights.map((h) => (
                         <div key={h} className="flex items-center gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-accent flex-shrink-0" />
                           <span className="text-sm font-medium text-gray-700">
                             {h}
                           </span>
@@ -171,7 +171,7 @@ export default function ShowsPage() {
                     {show.hasDetailPage && show.slug && (
                       <Link
                         href={`/shows/${show.slug}`}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-black text-white text-sm font-bold rounded-full hover:bg-gray-800 transition-all group"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-black text-white text-sm font-bold hover:bg-gray-800 transition-all group"
                       >
                         상세 보기
                         <svg

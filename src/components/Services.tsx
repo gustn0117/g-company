@@ -257,7 +257,7 @@ export default function Services() {
   return (
     <section id="services" className="relative py-28 md:py-36 bg-white overflow-hidden" ref={ref}>
       {/* Decorative background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-accent/[0.02] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-accent/[0.02] blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section header */}
@@ -287,7 +287,7 @@ export default function Services() {
             return (
               <div
                 key={service.number}
-                className={`group relative rounded-3xl transition-all duration-700 ${
+                className={`group relative transition-all duration-700 ${
                   inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-12"
@@ -295,10 +295,10 @@ export default function Services() {
                 style={{ transitionDelay: `${index * 150 + 200}ms` }}
               >
                 {/* Gradient accent top border on hover */}
-                <div className="absolute inset-x-0 top-0 h-1 rounded-t-3xl bg-gradient-to-r from-accent via-accent-light to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent via-accent-light to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div
-                  className={`relative h-full rounded-3xl p-8 md:p-10 border transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] hover:-translate-y-2 ${
+                  className={`relative h-full p-8 md:p-10 border transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] hover:-translate-y-2 ${
                     service.dark
                       ? "bg-black border-white/10"
                       : "bg-white border-gray-100 hover:border-accent/20"
@@ -307,7 +307,7 @@ export default function Services() {
                   {/* Icon + number row */}
                   <div className="flex items-start justify-between mb-6">
                     <div
-                      className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 ${
+                      className={`w-14 h-14 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 ${
                         service.dark ? "bg-accent/10" : "bg-accent/[0.08]"
                       }`}
                     >
@@ -348,7 +348,7 @@ export default function Services() {
                   <div className="mt-8 space-y-3">
                     {service.features.map((feature) => (
                       <div key={feature} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <div className="w-5 h-5 bg-accent/10 flex items-center justify-center flex-shrink-0">
                           <CheckIcon className="w-3 h-3 text-accent" />
                         </div>
                         <span
@@ -369,7 +369,7 @@ export default function Services() {
 
         {/* Mini process flow preview */}
         <div
-          className={`mt-20 relative rounded-3xl overflow-hidden transition-all duration-700 delay-500 ${
+          className={`mt-20 relative overflow-hidden transition-all duration-700 delay-500 ${
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -411,8 +411,8 @@ export default function Services() {
                       <div key={item.step} className="relative text-center">
                         {/* Step circle */}
                         <div className="relative mx-auto w-12 h-12 mb-4">
-                          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-accent-light opacity-20" />
-                          <div className="absolute inset-[2px] rounded-full bg-black flex items-center justify-center">
+                          <div className="absolute inset-0 bg-gradient-to-br from-accent to-accent-light opacity-20" />
+                          <div className="absolute inset-[2px] bg-black flex items-center justify-center">
                             <StepIcon className="w-5 h-5 text-accent" />
                           </div>
                         </div>
@@ -455,8 +455,8 @@ export default function Services() {
                   return (
                     <div key={item.step} className="text-center">
                       <div className="relative mx-auto w-10 h-10 mb-2">
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-accent-light opacity-20" />
-                        <div className="absolute inset-[2px] rounded-full bg-black flex items-center justify-center">
+                        <div className="absolute inset-0 bg-gradient-to-br from-accent to-accent-light opacity-20" />
+                        <div className="absolute inset-[2px] bg-black flex items-center justify-center">
                           <StepIcon className="w-4 h-4 text-accent" />
                         </div>
                       </div>
@@ -476,14 +476,14 @@ export default function Services() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center px-7 py-3.5 bg-black text-white font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg shadow-black/10 group/btn text-sm"
+                className="inline-flex items-center justify-center px-7 py-3.5 bg-black text-white font-bold hover:bg-gray-800 transition-all duration-300 shadow-lg shadow-black/10 group/btn text-sm"
               >
                 공연 안내 자세히 보기
                 <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-7 py-3.5 border border-gray-200 text-black font-bold rounded-full hover:border-accent hover:text-accent transition-all duration-300 text-sm"
+                className="inline-flex items-center justify-center px-7 py-3.5 border border-gray-200 text-black font-bold hover:border-accent hover:text-accent transition-all duration-300 text-sm"
               >
                 공연 문의하기
               </Link>

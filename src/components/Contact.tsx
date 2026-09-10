@@ -87,7 +87,7 @@ export default function Contact() {
             {/* Contact details */}
             <div className="mt-10 space-y-6">
               <div className="flex items-center gap-5">
-                <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-black flex items-center justify-center flex-shrink-0">
                   <svg
                     className="w-6 h-6 text-accent"
                     fill="none"
@@ -114,7 +114,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-5">
-                <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-black flex items-center justify-center flex-shrink-0">
                   <svg
                     className="w-6 h-6 text-accent"
                     fill="none"
@@ -140,7 +140,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-5">
-                <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-black flex items-center justify-center flex-shrink-0">
                   <svg
                     className="w-6 h-6 text-accent"
                     fill="none"
@@ -179,13 +179,13 @@ export default function Contact() {
                 : "opacity-0 translate-x-10"
             }`}
           >
-            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm">
+            <div className="bg-white p-8 md:p-10 shadow-sm">
               <h3 className="text-xl font-black text-black mb-6">
                 공연 문의하기
               </h3>
               {submitState === "success" ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-accent/10 flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -194,7 +194,7 @@ export default function Contact() {
                   <p className="mt-2 text-gray-500 text-sm">빠른 시일 내에 연락드리겠습니다.</p>
                   <button
                     onClick={() => setSubmitState("idle")}
-                    className="mt-6 px-6 py-3 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors text-sm"
+                    className="mt-6 px-6 py-3 bg-black text-white font-bold hover:bg-gray-800 transition-colors text-sm"
                   >
                     추가 문의하기
                   </button>
@@ -212,7 +212,7 @@ export default function Contact() {
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       required
-                      className="w-full px-4 py-3 bg-gray-50 border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none"
+                      className="w-full px-4 py-3 bg-gray-50 border-0 text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none"
                     />
                   </div>
                   <div>
@@ -225,7 +225,7 @@ export default function Contact() {
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       required
-                      className="w-full px-4 py-3 bg-gray-50 border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none"
+                      className="w-full px-4 py-3 bg-gray-50 border-0 text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none"
                     />
                   </div>
                 </div>
@@ -239,7 +239,7 @@ export default function Contact() {
                     placeholder="OO중학교"
                     value={form.organization}
                     onChange={(e) => setForm({ ...form, organization: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-50 border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none"
+                    className="w-full px-4 py-3 bg-gray-50 border-0 text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none"
                   />
                 </div>
 
@@ -252,7 +252,7 @@ export default function Contact() {
                     placeholder="2026년 O월 O일"
                     value={form.preferred_date}
                     onChange={(e) => setForm({ ...form, preferred_date: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-50 border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none"
+                    className="w-full px-4 py-3 bg-gray-50 border-0 text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none"
                   />
                 </div>
 
@@ -265,7 +265,7 @@ export default function Contact() {
                     placeholder="공연 대상, 인원, 장소 등 자세한 내용을 적어주세요."
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-50 border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none resize-none"
+                    className="w-full px-4 py-3 bg-gray-50 border-0 text-sm focus:ring-2 focus:ring-accent focus:bg-white transition-all outline-none resize-none"
                   />
                 </div>
 
@@ -276,7 +276,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={submitState === "submitting"}
-                  className="w-full py-4 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors disabled:opacity-50"
+                  className="w-full py-4 bg-black text-white font-bold hover:bg-gray-800 transition-colors disabled:opacity-50"
                 >
                   {submitState === "submitting" ? "전송 중..." : "문의 보내기"}
                 </button>

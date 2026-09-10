@@ -166,7 +166,7 @@ export default function About() {
           >
             <div className="relative">
               {/* Performance photos slideshow */}
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden relative shadow-2xl">
+              <div className="aspect-[4/5] overflow-hidden relative shadow-2xl">
                 {aboutImages.map((img, i) => (
                   <Image
                     key={img.src}
@@ -187,7 +187,7 @@ export default function About() {
                     <button
                       key={i}
                       onClick={() => setCurrentImage(i)}
-                      className={`h-1.5 rounded-full transition-all duration-500 ${
+                      className={`h-1.5 transition-all duration-500 ${
                         i === currentImage
                           ? "w-6 bg-accent"
                           : "w-1.5 bg-white/50 hover:bg-white/80"
@@ -198,7 +198,7 @@ export default function About() {
               </div>
 
               {/* Floating card */}
-              <div className="absolute -bottom-6 -right-6 bg-black text-white p-6 rounded-2xl shadow-xl max-w-[200px]">
+              <div className="absolute -bottom-6 -right-6 bg-black text-white p-6 shadow-xl max-w-[200px]">
                 <p className="text-3xl font-black text-accent">10+</p>
                 <p className="text-sm text-white/70 mt-1">
                   년간 쌓아온
@@ -247,10 +247,10 @@ export default function About() {
               {keyPoints.map((item) => (
                 <div
                   key={item.text}
-                  className={`flex items-center gap-3.5 p-4 bg-gradient-to-r ${item.gradient} rounded-xl border border-gray-100 hover:shadow-md transition-all duration-300 group`}
+                  className={`flex items-center gap-3.5 p-4 bg-gradient-to-r ${item.gradient} border border-gray-100 hover:shadow-md transition-all duration-300 group`}
                 >
                   <div
-                    className={`w-10 h-10 ${item.iconBg} rounded-xl flex items-center justify-center text-white shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform duration-300`}
+                    className={`w-10 h-10 ${item.iconBg} flex items-center justify-center text-white shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform duration-300`}
                   >
                     {item.icon}
                   </div>

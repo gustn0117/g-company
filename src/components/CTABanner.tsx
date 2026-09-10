@@ -23,8 +23,8 @@ export default function CTABanner({
   return (
     <section ref={ref} className="py-20 md:py-28 bg-black text-white relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-10 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-1/4 w-80 h-80 bg-white/3 rounded-full blur-3xl" />
+        <div className="absolute top-10 right-1/4 w-96 h-96 bg-accent/5 blur-3xl" />
+        <div className="absolute bottom-10 left-1/4 w-80 h-80 bg-white/3 blur-3xl" />
       </div>
 
       <div
@@ -44,7 +44,7 @@ export default function CTABanner({
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href={buttonHref}
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-accent transition-all duration-300 group"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold hover:bg-accent transition-all duration-300 group"
           >
             {buttonText}
             <svg
@@ -63,7 +63,7 @@ export default function CTABanner({
           </Link>
           <Link
             href="/shows"
-            className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
+            className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold hover:bg-white/10 transition-all duration-300"
           >
             작품 둘러보기
           </Link>

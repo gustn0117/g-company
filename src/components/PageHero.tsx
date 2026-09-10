@@ -23,8 +23,8 @@ export default function PageHero({
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-black text-white overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-20 w-80 h-80 bg-white/3 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-20 w-96 h-96 bg-accent/5 blur-3xl" />
+        <div className="absolute bottom-10 left-20 w-80 h-80 bg-white/3 blur-3xl" />
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{

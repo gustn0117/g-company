@@ -70,7 +70,7 @@ export default function ReviewsPage() {
             {reviews.map((review, index) => (
               <div
                 key={review.name + review.org}
-                className={`bg-gray-warm rounded-3xl p-8 md:p-10 transition-all duration-700 hover:shadow-lg ${
+                className={`bg-gray-warm p-8 md:p-10 transition-all duration-700 hover:shadow-lg ${
                   reviewsSection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-12"
@@ -92,7 +92,7 @@ export default function ReviewsPage() {
                 </div>
 
                 {/* Show tag */}
-                <span className="inline-block mt-4 px-3 py-1 bg-black/5 text-xs font-bold text-gray-600 rounded-full">
+                <span className="inline-block mt-4 px-3 py-1 bg-black/5 text-xs font-bold text-gray-600">
                   {review.show}
                 </span>
 
@@ -103,7 +103,7 @@ export default function ReviewsPage() {
 
                 {/* Author */}
                 <div className="mt-8 flex items-center gap-4">
-                  <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-black flex items-center justify-center">
                     <span className="text-white font-bold text-sm">
                       {review.name.charAt(0)}
                     </span>

@@ -126,8 +126,8 @@ export default function Home() {
         className="py-32 md:py-40 bg-white relative overflow-hidden"
       >
         {/* Background decoration */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/[0.03] rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/[0.02] rounded-full translate-y-1/2 -translate-x-1/3 blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/[0.03] -translate-y-1/2 translate-x-1/3 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/[0.02] translate-y-1/2 -translate-x-1/3 blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div
@@ -176,7 +176,7 @@ export default function Home() {
                 <Link
                   key={s.number}
                   href="/services"
-                  className={`group relative ${s.bgColor} rounded-3xl p-10 md:p-12 border border-gray-100 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] hover:-translate-y-3 transition-all duration-700 block overflow-hidden ${
+                  className={`group relative ${s.bgColor} p-10 md:p-12 border border-gray-100 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] hover:-translate-y-3 transition-all duration-700 block overflow-hidden ${
                     servicesSection.inView
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-12"
@@ -187,12 +187,12 @@ export default function Home() {
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent-light to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Background glow */}
-                  <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-accent/0 group-hover:bg-accent/5 rounded-full blur-3xl transition-all duration-700" />
+                  <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-accent/0 group-hover:bg-accent/5 blur-3xl transition-all duration-700" />
 
                   <div className="relative">
                     {/* Icon */}
                     <div
-                      className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110 ${
+                      className={`w-16 h-16 flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110 ${
                         s.bgColor === "bg-black"
                           ? "bg-white/10 group-hover:bg-accent/20"
                           : "bg-black/5 group-hover:bg-accent/10"
@@ -279,7 +279,7 @@ export default function Home() {
             ].map((img, i) => (
               <div
                 key={i}
-                className="relative aspect-[3/2] rounded-2xl overflow-hidden group cursor-pointer"
+                className="relative aspect-[3/2] overflow-hidden group cursor-pointer"
               >
                 <Image
                   src={img.src}
@@ -306,8 +306,8 @@ export default function Home() {
         className="py-32 md:py-40 bg-gray-warm relative overflow-hidden"
       >
         {/* Background decoration */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-accent/[0.04] rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-20 left-0 w-96 h-96 bg-accent/[0.04] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-20 right-0 w-96 h-96 bg-accent/[0.04] blur-3xl pointer-events-none" />
+        <div className="absolute bottom-20 left-0 w-96 h-96 bg-accent/[0.04] blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div
@@ -353,7 +353,7 @@ export default function Home() {
             {reviews.map((review, i) => (
               <div
                 key={review.name}
-                className={`group relative bg-white rounded-3xl p-10 md:p-12 transition-all duration-700 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 overflow-hidden ${
+                className={`group relative bg-white p-10 md:p-12 transition-all duration-700 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 overflow-hidden ${
                   reviewsSection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-12"
@@ -389,11 +389,11 @@ export default function Home() {
                   </p>
 
                   {/* Divider */}
-                  <div className="w-12 h-0.5 bg-accent/30 mt-10 mb-8 rounded-full group-hover:w-20 transition-all duration-500" />
+                  <div className="w-12 h-0.5 bg-accent/30 mt-10 mb-8 group-hover:w-20 transition-all duration-500" />
 
                   {/* Author */}
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent-light rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent-light flex items-center justify-center shadow-lg">
                       <span className="text-white font-black text-lg">
                         {review.name.charAt(0)}
                       </span>
@@ -442,7 +442,7 @@ export default function Home() {
           {/* Decorative line */}
           <div className="flex items-center justify-center gap-3 mb-12">
             <div className="w-16 h-px bg-accent/40" />
-            <div className="w-2.5 h-2.5 rounded-full bg-accent/60" />
+            <div className="w-2.5 h-2.5 bg-accent/60" />
             <div className="w-16 h-px bg-accent/40" />
           </div>
 
@@ -474,7 +474,7 @@ export default function Home() {
           >
             <Link
               href="/contact"
-              className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-lg rounded-full transition-all duration-300 overflow-hidden shadow-[0_0_30px_rgba(212,168,83,0.3)]"
+              className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-lg transition-all duration-300 overflow-hidden shadow-[0_0_30px_rgba(212,168,83,0.3)]"
               style={{
                 background:
                   "linear-gradient(135deg, #D4A853 0%, #F5E6C8 50%, #D4A853 100%)",
@@ -500,7 +500,7 @@ export default function Home() {
             </Link>
             <Link
               href="/shows"
-              className="inline-flex items-center justify-center px-10 py-5 border border-white/20 text-white font-bold text-lg rounded-full hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              className="inline-flex items-center justify-center px-10 py-5 border border-white/20 text-white font-bold text-lg hover:bg-white/10 hover:border-white/40 transition-all duration-300"
             >
               작품 둘러보기
             </Link>

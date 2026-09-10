@@ -87,7 +87,7 @@ export default function AdminPage() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
         <div className="w-full max-w-sm">
-          <div className="bg-white rounded-2xl shadow-lg p-8">
+          <div className="bg-white shadow-lg p-8">
             <div className="text-center mb-6">
               <h1 className="text-2xl font-black text-black">관리자 로그인</h1>
               <p className="text-sm text-gray-400 mt-1">지컴퍼니 문의 관리</p>
@@ -98,7 +98,7 @@ export default function AdminPage() {
                 placeholder="비밀번호를 입력하세요"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-50 border-0 rounded-xl text-sm focus:ring-2 focus:ring-accent transition-all outline-none"
+                className="w-full px-4 py-3 bg-gray-50 border-0 text-sm focus:ring-2 focus:ring-accent transition-all outline-none"
                 autoFocus
               />
               {authError && (
@@ -106,7 +106,7 @@ export default function AdminPage() {
               )}
               <button
                 type="submit"
-                className="w-full py-3 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors"
+                className="w-full py-3 bg-black text-white font-bold hover:bg-gray-800 transition-colors"
               >
                 로그인
               </button>
@@ -143,7 +143,7 @@ export default function AdminPage() {
             <button
               key={s}
               onClick={() => setFilter(s)}
-              className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
+              className={`px-4 py-2 text-sm font-semibold transition-colors ${
                 filter === s
                   ? "bg-black text-white"
                   : "bg-white text-gray-500 hover:bg-gray-100"
@@ -159,7 +159,7 @@ export default function AdminPage() {
           ))}
           <button
             onClick={fetchInquiries}
-            className="ml-auto px-4 py-2 bg-white rounded-lg text-sm text-gray-500 hover:bg-gray-100 transition-colors"
+            className="ml-auto px-4 py-2 bg-white text-sm text-gray-500 hover:bg-gray-100 transition-colors"
           >
             새로고침
           </button>
@@ -177,7 +177,7 @@ export default function AdminPage() {
             {inquiries.map((inquiry) => (
               <div
                 key={inquiry.id}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1 min-w-0">
@@ -192,7 +192,7 @@ export default function AdminPage() {
                         </span>
                       )}
                       <span
-                        className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                        className={`px-2.5 py-0.5 text-xs font-bold ${
                           STATUS_MAP[inquiry.status].color
                         }`}
                       >
@@ -204,7 +204,7 @@ export default function AdminPage() {
                     <div className="mt-2 flex items-center gap-4 text-sm text-gray-500">
                       <span>{inquiry.phone}</span>
                       {inquiry.show && (
-                        <span className="px-2 py-0.5 bg-gray-100 rounded text-xs font-medium">
+                        <span className="px-2 py-0.5 bg-gray-100 text-xs font-medium">
                           {inquiry.show}
                         </span>
                       )}
@@ -231,7 +231,7 @@ export default function AdminPage() {
                     {inquiry.status === "new" && (
                       <button
                         onClick={() => updateStatus(inquiry.id, "confirmed")}
-                        className="px-3 py-1.5 bg-amber-50 text-amber-600 text-xs font-bold rounded-lg hover:bg-amber-100 transition-colors"
+                        className="px-3 py-1.5 bg-amber-50 text-amber-600 text-xs font-bold hover:bg-amber-100 transition-colors"
                       >
                         확인
                       </button>
@@ -239,7 +239,7 @@ export default function AdminPage() {
                     {inquiry.status === "confirmed" && (
                       <button
                         onClick={() => updateStatus(inquiry.id, "completed")}
-                        className="px-3 py-1.5 bg-green-50 text-green-600 text-xs font-bold rounded-lg hover:bg-green-100 transition-colors"
+                        className="px-3 py-1.5 bg-green-50 text-green-600 text-xs font-bold hover:bg-green-100 transition-colors"
                       >
                         완료
                       </button>
@@ -247,14 +247,14 @@ export default function AdminPage() {
                     {inquiry.status === "completed" && (
                       <button
                         onClick={() => updateStatus(inquiry.id, "new")}
-                        className="px-3 py-1.5 bg-blue-50 text-blue-600 text-xs font-bold rounded-lg hover:bg-blue-100 transition-colors"
+                        className="px-3 py-1.5 bg-blue-50 text-blue-600 text-xs font-bold hover:bg-blue-100 transition-colors"
                       >
                         재오픈
                       </button>
                     )}
                     <button
                       onClick={() => deleteInquiry(inquiry.id)}
-                      className="px-3 py-1.5 bg-red-50 text-red-500 text-xs font-bold rounded-lg hover:bg-red-100 transition-colors"
+                      className="px-3 py-1.5 bg-red-50 text-red-500 text-xs font-bold hover:bg-red-100 transition-colors"
                     >
                       삭제
                     </button>

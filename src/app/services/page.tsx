@@ -267,8 +267,8 @@ export default function ServicesPage() {
       {/* ── Service Cards ── */}
       <section ref={cardsSection.ref} className="relative py-28 md:py-36 bg-white overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gray-warm rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/[0.03] blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gray-warm blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
@@ -277,7 +277,7 @@ export default function ServicesPage() {
               return (
                 <div
                   key={service.number}
-                  className={`group relative rounded-3xl transition-all duration-700 ${
+                  className={`group relative transition-all duration-700 ${
                     cardsSection.inView
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-12"
@@ -285,10 +285,10 @@ export default function ServicesPage() {
                   style={{ transitionDelay: `${index * 150 + 200}ms` }}
                 >
                   {/* Gradient accent top border */}
-                  <div className="absolute inset-x-0 top-0 h-1 rounded-t-3xl bg-gradient-to-r from-accent via-accent-light to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent via-accent-light to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <div
-                    className={`relative h-full rounded-3xl p-8 md:p-10 border transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] hover:-translate-y-2 ${
+                    className={`relative h-full p-8 md:p-10 border transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] hover:-translate-y-2 ${
                       service.dark
                         ? "bg-black border-white/10"
                         : "bg-white border-gray-100 hover:border-accent/20"
@@ -297,7 +297,7 @@ export default function ServicesPage() {
                     {/* Icon + number row */}
                     <div className="flex items-start justify-between mb-6">
                       <div
-                        className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 ${
+                        className={`w-14 h-14 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 ${
                           service.dark
                             ? "bg-accent/10"
                             : "bg-accent/[0.08]"
@@ -344,7 +344,7 @@ export default function ServicesPage() {
                     <div className="mt-8 space-y-3">
                       {service.features.map((feature) => (
                         <div key={feature} className="flex items-center gap-3">
-                          <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                          <div className="w-5 h-5 bg-accent/10 flex items-center justify-center flex-shrink-0">
                             <CheckIcon className="w-3 h-3 text-accent" />
                           </div>
                           <span
@@ -389,7 +389,7 @@ export default function ServicesPage() {
             backgroundSize: "40px 40px",
           }}
         />
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/[0.03] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/[0.03] blur-3xl pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section heading */}
@@ -442,12 +442,12 @@ export default function ServicesPage() {
                       {/* Step circle with gradient */}
                       <div className="relative mx-auto w-[104px] h-[104px]">
                         {/* Outer glow ring */}
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-accent-light/20 blur-md" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent-light/20 blur-md" />
                         {/* White bg circle */}
-                        <div className="absolute inset-1 rounded-full bg-white shadow-lg" />
+                        <div className="absolute inset-1 bg-white shadow-lg" />
                         {/* Gradient border ring */}
                         <div
-                          className="absolute inset-0 rounded-full"
+                          className="absolute inset-0"
                           style={{
                             background: "linear-gradient(135deg, #D4A853, #F5E6C8, #D4A853)",
                             padding: "2px",
@@ -457,7 +457,7 @@ export default function ServicesPage() {
                           }}
                         />
                         {/* Inner content */}
-                        <div className="absolute inset-3 rounded-full bg-gradient-to-br from-black to-gray-800 flex flex-col items-center justify-center">
+                        <div className="absolute inset-3 bg-gradient-to-br from-black to-gray-800 flex flex-col items-center justify-center">
                           <StepIcon className="w-6 h-6 text-accent" />
                           <span className="text-[10px] font-bold text-white/50 mt-0.5">
                             STEP {item.step}
@@ -475,7 +475,7 @@ export default function ServicesPage() {
                           }`}
                           style={{ transitionDelay: `${i * 200 + 800}ms` }}
                         >
-                          <div className="w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center">
+                          <div className="w-6 h-6 bg-white shadow-md flex items-center justify-center">
                             <svg
                               className="w-3 h-3 text-accent"
                               fill="none"
@@ -492,7 +492,7 @@ export default function ServicesPage() {
                       )}
 
                       {/* Card below */}
-                      <div className="mt-6 bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:shadow-md hover:border-accent/10 transition-all duration-300">
+                      <div className="mt-6 bg-white p-5 shadow-sm border border-gray-100 hover:shadow-md hover:border-accent/10 transition-all duration-300">
                         <h4 className="font-bold text-black text-lg">
                           {item.title}
                         </h4>
@@ -535,14 +535,14 @@ export default function ServicesPage() {
                     >
                       {/* Step circle on the line */}
                       <div className="absolute -left-12 top-1/2 -translate-y-1/2 w-[46px] h-[46px]">
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-accent-light" />
-                        <div className="absolute inset-[2px] rounded-full bg-black flex items-center justify-center">
+                        <div className="absolute inset-0 bg-gradient-to-br from-accent to-accent-light" />
+                        <div className="absolute inset-[2px] bg-black flex items-center justify-center">
                           <StepIcon className="w-5 h-5 text-accent" />
                         </div>
                       </div>
 
                       {/* Card */}
-                      <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+                      <div className="bg-white p-5 shadow-sm border border-gray-100">
                         <span className="text-[10px] font-bold text-accent tracking-widest uppercase">
                           STEP {item.step}
                         </span>
@@ -568,7 +568,7 @@ export default function ServicesPage() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-black text-white font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg shadow-black/20 group"
+              className="inline-flex items-center justify-center px-8 py-4 bg-black text-white font-bold hover:bg-gray-800 transition-all duration-300 shadow-lg shadow-black/20 group"
             >
               공연 상담 신청하기
               <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
@@ -580,7 +580,7 @@ export default function ServicesPage() {
       {/* ── Why G-Company ── */}
       <section ref={whySection.ref} className="relative py-28 md:py-36 bg-white overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent/[0.02] rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent/[0.02] blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div
@@ -621,7 +621,7 @@ export default function ServicesPage() {
             ].map((item, i) => (
               <div
                 key={item.title}
-                className={`group relative bg-white rounded-3xl p-8 border border-gray-100 transition-all duration-700 hover:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.1)] hover:-translate-y-1 hover:border-accent/20 ${
+                className={`group relative bg-white p-8 border border-gray-100 transition-all duration-700 hover:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.1)] hover:-translate-y-1 hover:border-accent/20 ${
                   whySection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -631,7 +631,7 @@ export default function ServicesPage() {
                 {/* Top accent line */}
                 <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/10 to-accent-light/20 flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110">
+                <div className="w-14 h-14 bg-gradient-to-br from-accent/10 to-accent-light/20 flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110">
                   <svg
                     className="w-7 h-7 text-accent"
                     fill="none"

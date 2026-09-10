@@ -70,7 +70,7 @@ export default function Reviews() {
           {reviews.map((review, index) => (
             <div
               key={review.name}
-              className={`bg-gray-warm rounded-3xl p-8 md:p-10 transition-all duration-700 hover:shadow-lg ${
+              className={`bg-gray-warm p-8 md:p-10 transition-all duration-700 hover:shadow-lg ${
                 inView
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"
@@ -98,7 +98,7 @@ export default function Reviews() {
 
               {/* Author */}
               <div className="mt-8 flex items-center gap-4">
-                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-black flex items-center justify-center">
                   <span className="text-white font-bold text-sm">
                     {review.name.charAt(0)}
                   </span>

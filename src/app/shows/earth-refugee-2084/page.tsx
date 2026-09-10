@@ -172,9 +172,9 @@ export default function EarthRefugee2084Page() {
       <section className="relative min-h-[600px] pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-[#2D3654] via-[#1E2840] to-[#151D30] text-white overflow-hidden flex flex-col">
         {/* Background effects */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-amber-600/8 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-20 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-600/3 rounded-full blur-3xl" />
+          <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-amber-600/8 blur-3xl" />
+          <div className="absolute bottom-10 left-20 w-96 h-96 bg-indigo-500/5 blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-600/3 blur-3xl" />
           <div
             className="absolute inset-0 opacity-[0.03]"
             style={{
@@ -189,7 +189,7 @@ export default function EarthRefugee2084Page() {
         {particles.map((p, i) => (
           <div
             key={i}
-            className="er2084-particle absolute rounded-full bg-amber-500"
+            className="er2084-particle absolute bg-amber-500"
             style={{
               width: p.size,
               height: p.size,
@@ -216,13 +216,13 @@ export default function EarthRefugee2084Page() {
           <div className="grid md:grid-cols-2 gap-12 items-center flex-1">
             <div>
               <div className="flex items-center gap-3 mb-6 animate-fade-in-up">
-                <span className="inline-block px-3 py-1 bg-amber-600/20 text-amber-300 text-xs font-bold rounded-full">
+                <span className="inline-block px-3 py-1 bg-amber-600/20 text-amber-300 text-xs font-bold">
                   환경
                 </span>
-                <span className="inline-block px-3 py-1 bg-white/10 text-white/70 text-xs font-bold rounded-full">
+                <span className="inline-block px-3 py-1 bg-white/10 text-white/70 text-xs font-bold">
                   창작낭독뮤지컬
                 </span>
-                <span className="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-bold rounded-full">
+                <span className="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-bold">
                   수상작 원작
                 </span>
               </div>
@@ -242,7 +242,7 @@ export default function EarthRefugee2084Page() {
               <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in-up delay-300">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-amber-600 text-white font-bold rounded-full hover:bg-amber-500 hover:scale-105 transition-all duration-300 group shadow-lg shadow-amber-600/25"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-amber-600 text-white font-bold hover:bg-amber-500 hover:scale-105 transition-all duration-300 group shadow-lg shadow-amber-600/25"
                 >
                   공연 문의하기
                   <svg
@@ -256,7 +256,7 @@ export default function EarthRefugee2084Page() {
                 </Link>
                 <Link
                   href="/shows"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold hover:bg-white/10 transition-all duration-300"
                 >
                   다른 작품 보기
                 </Link>
@@ -265,7 +265,7 @@ export default function EarthRefugee2084Page() {
 
             {/* Poster Image */}
             <div className="animate-fade-in-up delay-200">
-              <div className="aspect-[3/4] bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl">
+              <div className="aspect-[3/4] bg-white/5 backdrop-blur-sm border border-white/10 relative overflow-hidden shadow-2xl">
                 <Image
                   src="/images/earth-refugee-2084-poster.png"
                   alt="2084 지구난민 공연 포스터"
@@ -291,9 +291,9 @@ export default function EarthRefugee2084Page() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-4 flex items-center gap-3 hover:bg-white/15 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-md border border-white/10 px-5 py-4 flex items-center gap-3 hover:bg-white/15 transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-amber-600/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-amber-600/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={stat.icon} />
                     </svg>
@@ -332,12 +332,12 @@ export default function EarthRefugee2084Page() {
                 {overviewItems.map((item, i) => (
                   <div
                     key={item.label}
-                    className={`bg-gray-warm rounded-2xl p-5 hover:shadow-md transition-all duration-500 ${
+                    className={`bg-gray-warm p-5 hover:shadow-md transition-all duration-500 ${
                       i === overviewItems.length - 1 && overviewItems.length % 2 !== 0 ? "col-span-2" : ""
                     }`}
                     style={{ transitionDelay: `${i * 60 + 100}ms` }}
                   >
-                    <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center mb-3 shadow-sm">
+                    <div className="w-9 h-9 bg-white flex items-center justify-center mb-3 shadow-sm">
                       <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                       </svg>
@@ -355,13 +355,13 @@ export default function EarthRefugee2084Page() {
                 overviewSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="bg-gray-warm rounded-3xl p-8 md:p-10 relative overflow-hidden h-full">
+              <div className="bg-gray-warm p-8 md:p-10 relative overflow-hidden h-full">
                 {/* Dramatic left border */}
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-600 via-accent to-amber-400" />
 
                 <div className="pl-4">
                   <div className="flex items-center gap-2 mb-6">
-                    <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+                    <div className="w-8 h-8 bg-accent/10 flex items-center justify-center">
                       <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
@@ -379,7 +379,7 @@ export default function EarthRefugee2084Page() {
                       독창적인 형식을 통해 스스로 공감하고, 상상하며, 기후 문제를
                       &lsquo;자신의 이야기&rsquo;로 받아들이게 만드는 예술교육형 공연입니다.
                     </p>
-                    <div className="bg-white rounded-2xl p-6 mt-6 border-l-4 border-accent shadow-sm">
+                    <div className="bg-white p-6 mt-6 border-l-4 border-accent shadow-sm">
                       <p className="text-black font-bold italic text-center text-lg leading-relaxed">
                         &ldquo;지구를 떠나야 하는 이유는 무엇이었을까?&rdquo;
                         <br />
@@ -398,10 +398,10 @@ export default function EarthRefugee2084Page() {
       <section ref={storySection.ref} className="py-24 md:py-36 bg-[#1A2238] text-white relative overflow-hidden">
         {/* Multi-layered atmospheric background */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-3xl" />
-          <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-amber-600/3 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/3 w-[300px] h-[300px] bg-amber-500/4 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-500/5 blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/5 blur-3xl" />
+          <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-amber-600/3 blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/3 w-[300px] h-[300px] bg-amber-500/4 blur-3xl" />
           {/* Subtle radial overlay */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(15,23,42,0.6)_70%)]" />
           {/* Horizontal subtle scan lines for atmosphere */}
@@ -467,8 +467,8 @@ export default function EarthRefugee2084Page() {
                   >
                     {/* ACT indicator circle */}
                     <div className="absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
-                      <div className="absolute inset-0 rounded-full border border-amber-500/30 bg-[#1A2238]" />
-                      <div className="absolute inset-1 rounded-full bg-gradient-to-br from-amber-500/10 to-transparent" />
+                      <div className="absolute inset-0 border border-amber-500/30 bg-[#1A2238]" />
+                      <div className="absolute inset-1 bg-gradient-to-br from-amber-500/10 to-transparent" />
                       <div className="relative text-center">
                         <p className="text-[8px] md:text-[9px] font-bold text-amber-400/70 tracking-wider leading-none">{step.act.split(" ")[0]}</p>
                         <p className="text-base md:text-lg font-black text-amber-400 leading-none mt-0.5">{step.act.split(" ")[1]}</p>
@@ -476,7 +476,7 @@ export default function EarthRefugee2084Page() {
                     </div>
 
                     {/* Content card */}
-                    <div className="bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/[0.06] p-6 md:p-8 hover:bg-white/[0.05] hover:border-amber-500/20 transition-all duration-500">
+                    <div className="bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] p-6 md:p-8 hover:bg-white/[0.05] hover:border-amber-500/20 transition-all duration-500">
                       {i === 0 ? (
                         /* First act with dramatic large opening text */
                         <div>
@@ -508,9 +508,9 @@ export default function EarthRefugee2084Page() {
                     {/* Decorative divider between acts */}
                     {i < synopsisSteps.length - 1 && (
                       <div className="flex items-center gap-2 mt-6 ml-2">
-                        <div className="w-1 h-1 rounded-full bg-amber-500/30" />
-                        <div className="w-1 h-1 rounded-full bg-amber-500/20" />
-                        <div className="w-1 h-1 rounded-full bg-amber-500/10" />
+                        <div className="w-1 h-1 bg-amber-500/30" />
+                        <div className="w-1 h-1 bg-amber-500/20" />
+                        <div className="w-1 h-1 bg-amber-500/10" />
                       </div>
                     )}
                   </div>
@@ -547,13 +547,13 @@ export default function EarthRefugee2084Page() {
             >
               <div className="relative">
                 {/* Outer glow effect */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-amber-500/10 rounded-3xl blur-xl" />
+                <div className="absolute -inset-4 bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-amber-500/10 blur-xl" />
 
                 {/* Gradient border wrapper */}
-                <div className="relative rounded-3xl p-[2px] bg-gradient-to-r from-amber-500 via-amber-400/50 to-amber-500">
-                  <div className="bg-gradient-to-b from-[#1A2238] via-[#1A2238] to-[#162033] rounded-3xl p-10 md:p-14 lg:p-16 text-center relative overflow-hidden">
+                <div className="relative p-[2px] bg-gradient-to-r from-amber-500 via-amber-400/50 to-amber-500">
+                  <div className="bg-gradient-to-b from-[#1A2238] via-[#1A2238] to-[#162033] p-10 md:p-14 lg:p-16 text-center relative overflow-hidden">
                     {/* Inner atmospheric glow */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-amber-500/5 rounded-full blur-3xl" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-amber-500/5 blur-3xl" />
 
                     {/* Large decorative opening quote mark */}
                     <div className="relative z-10">
@@ -609,7 +609,7 @@ export default function EarthRefugee2084Page() {
             {keywords.map((item, i) => (
               <div
                 key={item.title}
-                className={`group relative bg-gradient-to-br from-gray-warm to-white rounded-2xl p-7 md:p-9 text-center hover:scale-105 hover:shadow-xl transition-all duration-500 cursor-default overflow-hidden border border-gray-100 ${
+                className={`group relative bg-gradient-to-br from-gray-warm to-white p-7 md:p-9 text-center hover:scale-105 hover:shadow-xl transition-all duration-500 cursor-default overflow-hidden border border-gray-100 ${
                   keywordsSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${i * 80 + 200}ms` }}
@@ -620,7 +620,7 @@ export default function EarthRefugee2084Page() {
                 </span>
 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 md:w-14 md:h-14 mx-auto rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/15 transition-colors duration-300">
+                  <div className="w-12 h-12 md:w-14 md:h-14 mx-auto bg-accent/10 flex items-center justify-center group-hover:bg-accent/15 transition-colors duration-300">
                     <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                     </svg>
@@ -647,8 +647,8 @@ export default function EarthRefugee2084Page() {
             <div className="flex items-center justify-center gap-3 mb-4">
               {/* Pulsing red dot */}
               <span className="relative flex h-3 w-3">
-                <span className="er2084-pulse-dot absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
+                <span className="er2084-pulse-dot absolute inline-flex h-full w-full bg-red-500 opacity-75" />
+                <span className="relative inline-flex h-3 w-3 bg-red-500" />
               </span>
               <p className="text-red-500 font-bold text-sm tracking-widest uppercase">Climate Crisis</p>
             </div>
@@ -663,14 +663,14 @@ export default function EarthRefugee2084Page() {
               newsSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="relative bg-gradient-to-br from-amber-600 to-amber-500 rounded-2xl p-6 md:p-8 text-center text-white overflow-hidden">
+            <div className="relative bg-gradient-to-br from-amber-600 to-amber-500 p-6 md:p-8 text-center text-white overflow-hidden">
               <div className="absolute inset-0 bg-black/10" />
               <div className="relative z-10">
                 <p className="text-3xl md:text-4xl font-black">4,200만</p>
                 <p className="text-xs md:text-sm mt-2 text-white/80 font-medium">2010년 기후난민 발생 수</p>
               </div>
             </div>
-            <div className="relative bg-gradient-to-br from-red-600 to-red-500 rounded-2xl p-6 md:p-8 text-center text-white overflow-hidden">
+            <div className="relative bg-gradient-to-br from-red-600 to-red-500 p-6 md:p-8 text-center text-white overflow-hidden">
               <div className="absolute inset-0 bg-black/10" />
               <div className="relative z-10">
                 <p className="text-3xl md:text-4xl font-black">10억</p>
@@ -684,19 +684,19 @@ export default function EarthRefugee2084Page() {
             {newsClippings.map((article, i) => (
               <div
                 key={article.title}
-                className={`group relative bg-white rounded-2xl p-6 transition-all duration-700 hover:shadow-lg ${
+                className={`group relative bg-white p-6 transition-all duration-700 hover:shadow-lg ${
                   newsSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${i * 100 + 300}ms` }}
               >
                 {/* Newspaper fold effect */}
-                <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-gray-warm to-white rounded-bl-2xl shadow-inner" />
+                <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-gray-warm to-white shadow-inner" />
                 <div className="absolute top-0 right-0 w-8 h-8 overflow-hidden">
                   <div className="absolute -top-4 -right-4 w-8 h-8 bg-gray-200/50 rotate-45 shadow-sm" />
                 </div>
 
                 <div className="flex items-center gap-3 mb-4 pr-6">
-                  <span className="px-3 py-1 bg-gray-warm text-xs font-bold text-gray-600 rounded-full">
+                  <span className="px-3 py-1 bg-gray-warm text-xs font-bold text-gray-600">
                     {article.source}
                   </span>
                   <span className="text-xs text-gray-400">{article.date}</span>
@@ -711,7 +711,7 @@ export default function EarthRefugee2084Page() {
 
           {/* Detailed content */}
           <div
-            className={`bg-white rounded-3xl p-8 md:p-10 max-w-3xl mx-auto transition-all duration-700 delay-400 shadow-sm ${
+            className={`bg-white p-8 md:p-10 max-w-3xl mx-auto transition-all duration-700 delay-400 shadow-sm ${
               newsSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -726,7 +726,7 @@ export default function EarthRefugee2084Page() {
                 2024년 기후위기는 새로운 정점에 도달했으며, 전 세계적으로 전례 없는 폭염과 홍수, 폭풍이 발생했습니다.
                 80만 명 이상이 집을 잃고 강제 이주를 당했으며, 이는 2008년 기록 이래 연간 최다 인원을 기록했습니다.
               </p>
-              <div className="bg-slate-900 rounded-xl p-6 mt-4">
+              <div className="bg-slate-900 p-6 mt-4">
                 <p className="font-bold text-white text-center text-lg">
                   이것은 더 이상 먼 미래의 이야기가 아닙니다.
                 </p>
@@ -754,7 +754,7 @@ export default function EarthRefugee2084Page() {
             {features.map((item, i) => (
               <div
                 key={item.title}
-                className={`group bg-gray-warm rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-700 ${
+                className={`group bg-gray-warm overflow-hidden hover:shadow-xl transition-all duration-700 ${
                   featuresSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
                 style={{ transitionDelay: `${i * 150 + 200}ms` }}
@@ -768,7 +768,7 @@ export default function EarthRefugee2084Page() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
-                  <div className="w-12 h-12 mt-4 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/15 transition-colors duration-300">
+                  <div className="w-12 h-12 mt-4 bg-accent/10 flex items-center justify-center group-hover:bg-accent/15 transition-colors duration-300">
                     <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                     </svg>
@@ -805,7 +805,7 @@ export default function EarthRefugee2084Page() {
             ].map((item, i) => (
               <div
                 key={i}
-                className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-700 hover:scale-[1.03] hover:shadow-xl cursor-pointer ${
+                className={`group relative aspect-[4/3] overflow-hidden transition-all duration-700 hover:scale-[1.03] hover:shadow-xl cursor-pointer ${
                   gallerySection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${i * 100 + 200}ms` }}
@@ -814,7 +814,7 @@ export default function EarthRefugee2084Page() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-12 h-12 mx-auto rounded-full bg-white/10 flex items-center justify-center mb-3 group-hover:bg-white/20 transition-colors">
+                    <div className="w-12 h-12 mx-auto bg-white/10 flex items-center justify-center mb-3 group-hover:bg-white/20 transition-colors">
                       <svg className="w-5 h-5 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
@@ -844,7 +844,7 @@ export default function EarthRefugee2084Page() {
       <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
         <Link
           href="/contact"
-          className="flex items-center justify-center w-full py-4 bg-amber-600 text-white font-bold rounded-full shadow-2xl shadow-amber-600/30 hover:bg-amber-500 active:scale-[0.98] transition-all duration-300"
+          className="flex items-center justify-center w-full py-4 bg-amber-600 text-white font-bold shadow-2xl shadow-amber-600/30 hover:bg-amber-500 active:scale-[0.98] transition-all duration-300"
         >
           공연 문의하기
           <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

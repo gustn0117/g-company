@@ -97,8 +97,8 @@ export default function Stats() {
   return (
     <section className="py-24 md:py-32 bg-gray-warm relative overflow-hidden" ref={ref}>
       {/* Decorative */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-black/3 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-black/3 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <div
@@ -125,7 +125,7 @@ export default function Stats() {
               }`}
               style={{ transitionDelay: `${index * 100 + 200}ms` }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="bg-white p-8 shadow-sm hover:shadow-lg transition-shadow">
                 <p className="text-4xl md:text-5xl font-black text-black">
                   <CountUp
                     end={stat.number}

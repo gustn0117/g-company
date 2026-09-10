@@ -111,16 +111,16 @@ export default function KikikiSafetyPage() {
       <section className="relative min-h-[600px] flex flex-col justify-end pt-32 pb-0 bg-gradient-to-br from-[#3B5878] via-[#2D4666] to-[#1E3450] text-white overflow-hidden">
         {/* Decorative floating elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-32 left-20 w-80 h-80 bg-white/3 rounded-full blur-3xl" />
-          <div className="absolute top-1/3 left-1/2 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 right-20 w-96 h-96 bg-yellow-400/5 blur-3xl" />
+          <div className="absolute bottom-32 left-20 w-80 h-80 bg-white/3 blur-3xl" />
+          <div className="absolute top-1/3 left-1/2 w-64 h-64 bg-blue-400/5 blur-3xl" />
 
           {/* Floating circles */}
-          <div className="absolute top-24 left-[10%] w-3 h-3 bg-yellow-400/30 rounded-full animate-pulse" />
-          <div className="absolute top-40 right-[15%] w-5 h-5 bg-white/10 rounded-full animate-bounce" style={{ animationDuration: "3s" }} />
-          <div className="absolute bottom-48 left-[25%] w-4 h-4 bg-blue-300/20 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
-          <div className="absolute top-32 right-[35%] w-2 h-2 bg-yellow-300/40 rounded-full animate-ping" style={{ animationDuration: "4s" }} />
-          <div className="absolute bottom-56 right-[20%] w-6 h-6 bg-white/5 rounded-full animate-bounce" style={{ animationDuration: "4s", animationDelay: "0.5s" }} />
+          <div className="absolute top-24 left-[10%] w-3 h-3 bg-yellow-400/30 animate-pulse" />
+          <div className="absolute top-40 right-[15%] w-5 h-5 bg-white/10 animate-bounce" style={{ animationDuration: "3s" }} />
+          <div className="absolute bottom-48 left-[25%] w-4 h-4 bg-blue-300/20 animate-pulse" style={{ animationDelay: "1s" }} />
+          <div className="absolute top-32 right-[35%] w-2 h-2 bg-yellow-300/40 animate-ping" style={{ animationDuration: "4s" }} />
+          <div className="absolute bottom-56 right-[20%] w-6 h-6 bg-white/5 animate-bounce" style={{ animationDuration: "4s", animationDelay: "0.5s" }} />
 
           {/* Star shapes using CSS */}
           <div
@@ -149,14 +149,14 @@ export default function KikikiSafetyPage() {
           </div>
 
           {/* Floating badge: 45min */}
-          <div className="hidden md:flex absolute top-28 right-[8%] w-24 h-24 bg-yellow-400/10 backdrop-blur-sm border border-yellow-400/20 rounded-2xl items-center justify-center flex-col animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
+          <div className="hidden md:flex absolute top-28 right-[8%] w-24 h-24 bg-yellow-400/10 backdrop-blur-sm border border-yellow-400/20 items-center justify-center flex-col animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
             <span className="text-2xl font-black text-yellow-400">45</span>
             <span className="text-[10px] font-bold text-yellow-400/70 uppercase tracking-wider">min</span>
           </div>
 
           {/* Floating badge: Safety */}
-          <div className="hidden md:flex absolute bottom-44 left-[6%] px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full items-center gap-2 animate-fade-in-up" style={{ animationDelay: "1s" }}>
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+          <div className="hidden md:flex absolute bottom-44 left-[6%] px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 items-center gap-2 animate-fade-in-up" style={{ animationDelay: "1s" }}>
+            <span className="w-2 h-2 bg-green-400 animate-pulse" />
             <span className="text-xs font-bold text-white/50">안전교육 뮤지컬</span>
           </div>
 
@@ -172,26 +172,26 @@ export default function KikikiSafetyPage() {
 
           {/* Star-field effect - scattered small white dots to match poster's night sky */}
           <div className="absolute inset-0">
-            <div className="absolute top-[8%] left-[5%] w-1 h-1 bg-white/40 rounded-full" />
-            <div className="absolute top-[12%] left-[22%] w-[3px] h-[3px] bg-white/25 rounded-full animate-pulse" style={{ animationDuration: "3s" }} />
-            <div className="absolute top-[6%] left-[38%] w-1 h-1 bg-white/35 rounded-full" />
-            <div className="absolute top-[18%] left-[52%] w-[2px] h-[2px] bg-white/30 rounded-full animate-pulse" style={{ animationDuration: "4s", animationDelay: "1s" }} />
-            <div className="absolute top-[4%] left-[65%] w-1 h-1 bg-white/45 rounded-full" />
-            <div className="absolute top-[15%] left-[78%] w-[3px] h-[3px] bg-white/20 rounded-full animate-pulse" style={{ animationDuration: "5s", animationDelay: "2s" }} />
-            <div className="absolute top-[22%] left-[88%] w-1 h-1 bg-white/35 rounded-full" />
-            <div className="absolute top-[28%] left-[15%] w-[2px] h-[2px] bg-white/30 rounded-full" />
-            <div className="absolute top-[35%] left-[72%] w-1 h-1 bg-white/25 rounded-full animate-pulse" style={{ animationDuration: "3.5s", animationDelay: "0.5s" }} />
-            <div className="absolute top-[10%] left-[92%] w-[2px] h-[2px] bg-white/40 rounded-full" />
-            <div className="absolute top-[42%] left-[3%] w-1 h-1 bg-white/20 rounded-full" />
-            <div className="absolute top-[50%] left-[45%] w-[2px] h-[2px] bg-white/25 rounded-full animate-pulse" style={{ animationDuration: "4.5s", animationDelay: "1.5s" }} />
-            <div className="absolute top-[38%] left-[58%] w-1 h-1 bg-white/30 rounded-full" />
-            <div className="absolute top-[55%] left-[82%] w-[3px] h-[3px] bg-white/20 rounded-full" />
-            <div className="absolute top-[48%] left-[28%] w-1 h-1 bg-white/35 rounded-full animate-pulse" style={{ animationDuration: "3s", animationDelay: "2.5s" }} />
-            <div className="absolute top-[62%] left-[12%] w-[2px] h-[2px] bg-white/25 rounded-full" />
-            <div className="absolute top-[58%] left-[68%] w-1 h-1 bg-white/30 rounded-full" />
-            <div className="absolute top-[70%] left-[35%] w-[2px] h-[2px] bg-white/20 rounded-full animate-pulse" style={{ animationDuration: "5s", animationDelay: "0.8s" }} />
-            <div className="absolute top-[65%] left-[95%] w-1 h-1 bg-white/35 rounded-full" />
-            <div className="absolute top-[75%] left-[55%] w-1 h-1 bg-white/25 rounded-full" />
+            <div className="absolute top-[8%] left-[5%] w-1 h-1 bg-white/40" />
+            <div className="absolute top-[12%] left-[22%] w-[3px] h-[3px] bg-white/25 animate-pulse" style={{ animationDuration: "3s" }} />
+            <div className="absolute top-[6%] left-[38%] w-1 h-1 bg-white/35" />
+            <div className="absolute top-[18%] left-[52%] w-[2px] h-[2px] bg-white/30 animate-pulse" style={{ animationDuration: "4s", animationDelay: "1s" }} />
+            <div className="absolute top-[4%] left-[65%] w-1 h-1 bg-white/45" />
+            <div className="absolute top-[15%] left-[78%] w-[3px] h-[3px] bg-white/20 animate-pulse" style={{ animationDuration: "5s", animationDelay: "2s" }} />
+            <div className="absolute top-[22%] left-[88%] w-1 h-1 bg-white/35" />
+            <div className="absolute top-[28%] left-[15%] w-[2px] h-[2px] bg-white/30" />
+            <div className="absolute top-[35%] left-[72%] w-1 h-1 bg-white/25 animate-pulse" style={{ animationDuration: "3.5s", animationDelay: "0.5s" }} />
+            <div className="absolute top-[10%] left-[92%] w-[2px] h-[2px] bg-white/40" />
+            <div className="absolute top-[42%] left-[3%] w-1 h-1 bg-white/20" />
+            <div className="absolute top-[50%] left-[45%] w-[2px] h-[2px] bg-white/25 animate-pulse" style={{ animationDuration: "4.5s", animationDelay: "1.5s" }} />
+            <div className="absolute top-[38%] left-[58%] w-1 h-1 bg-white/30" />
+            <div className="absolute top-[55%] left-[82%] w-[3px] h-[3px] bg-white/20" />
+            <div className="absolute top-[48%] left-[28%] w-1 h-1 bg-white/35 animate-pulse" style={{ animationDuration: "3s", animationDelay: "2.5s" }} />
+            <div className="absolute top-[62%] left-[12%] w-[2px] h-[2px] bg-white/25" />
+            <div className="absolute top-[58%] left-[68%] w-1 h-1 bg-white/30" />
+            <div className="absolute top-[70%] left-[35%] w-[2px] h-[2px] bg-white/20 animate-pulse" style={{ animationDuration: "5s", animationDelay: "0.8s" }} />
+            <div className="absolute top-[65%] left-[95%] w-1 h-1 bg-white/35" />
+            <div className="absolute top-[75%] left-[55%] w-1 h-1 bg-white/25" />
           </div>
         </div>
 
@@ -212,10 +212,10 @@ export default function KikikiSafetyPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6 animate-fade-in-up">
-                <span className="inline-block px-3 py-1 bg-yellow-400/20 text-yellow-300 text-xs font-bold rounded-full">
+                <span className="inline-block px-3 py-1 bg-yellow-400/20 text-yellow-300 text-xs font-bold">
                   안전교육
                 </span>
-                <span className="inline-block px-3 py-1 bg-white/10 text-white/70 text-xs font-bold rounded-full">
+                <span className="inline-block px-3 py-1 bg-white/10 text-white/70 text-xs font-bold">
                   창작뮤지컬
                 </span>
               </div>
@@ -235,7 +235,7 @@ export default function KikikiSafetyPage() {
               <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in-up delay-300">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-yellow-400 text-black font-bold rounded-full hover:bg-yellow-300 hover:shadow-lg hover:shadow-yellow-400/20 transition-all duration-300 group"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-yellow-400 text-black font-bold hover:bg-yellow-300 hover:shadow-lg hover:shadow-yellow-400/20 transition-all duration-300 group"
                 >
                   공연 문의하기
                   <svg
@@ -254,7 +254,7 @@ export default function KikikiSafetyPage() {
                 </Link>
                 <Link
                   href="/shows"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-bold hover:bg-white/10 transition-all duration-300"
                 >
                   다른 작품 보기
                 </Link>
@@ -263,7 +263,7 @@ export default function KikikiSafetyPage() {
 
             {/* Poster Image */}
             <div className="animate-fade-in-up delay-200">
-              <div className="aspect-[3/4] bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl">
+              <div className="aspect-[3/4] bg-white/5 backdrop-blur-sm border border-white/10 relative overflow-hidden shadow-2xl">
                 <Image
                   src="/images/kikiki-poster.png"
                   alt="키키키의 안전생활백서 공연 포스터"
@@ -331,14 +331,14 @@ export default function KikikiSafetyPage() {
             {overviewStats.map((item, i) => (
               <div
                 key={item.label}
-                className={`bg-white border border-gray-100 rounded-2xl p-5 md:p-7 transition-all duration-700 hover:shadow-lg hover:border-accent/30 group ${
+                className={`bg-white border border-gray-100 p-5 md:p-7 transition-all duration-700 hover:shadow-lg hover:border-accent/30 group ${
                   overviewSection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${i * 80 + 100}ms` }}
               >
-                <div className="w-full h-1 bg-accent/60 rounded-full mb-5 group-hover:bg-accent transition-colors" />
+                <div className="w-full h-1 bg-accent/60 mb-5 group-hover:bg-accent transition-colors" />
                 <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
                   {item.label}
                 </p>
@@ -358,7 +358,7 @@ export default function KikikiSafetyPage() {
             }`}
           >
             <h3 className="text-xl font-black text-black mb-6 flex items-center gap-3">
-              <span className="w-8 h-[3px] bg-accent rounded-full" />
+              <span className="w-8 h-[3px] bg-accent" />
               등장인물
             </h3>
           </div>
@@ -366,14 +366,14 @@ export default function KikikiSafetyPage() {
             {characters.map((char, i) => (
               <div
                 key={char.name}
-                className={`bg-gray-warm rounded-2xl p-7 md:p-8 flex items-start gap-6 border-l-4 border-accent transition-all duration-700 hover:shadow-lg ${
+                className={`bg-gray-warm p-7 md:p-8 flex items-start gap-6 border-l-4 border-accent transition-all duration-700 hover:shadow-lg ${
                   overviewSection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${i * 150 + 300}ms` }}
               >
-                <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center shadow-sm">
+                <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white flex items-center justify-center shadow-sm">
                   <svg className="w-10 h-10 md:w-12 md:h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={char.icon} />
                   </svg>
@@ -396,9 +396,9 @@ export default function KikikiSafetyPage() {
       <section ref={storySection.ref} className="py-20 md:py-32 bg-[#1E3450] text-white relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 left-10 w-80 h-80 bg-[#2D4666]/50 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#1A2E44]/30 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-400/[0.02] rounded-full blur-3xl" />
+          <div className="absolute top-10 left-10 w-80 h-80 bg-[#2D4666]/50 blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#1A2E44]/30 blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-400/[0.02] blur-3xl" />
           <div
             className="absolute inset-0 opacity-[0.02]"
             style={{
@@ -447,7 +447,7 @@ export default function KikikiSafetyPage() {
             {/* Scene Cards with Journey Line */}
             <div className="relative">
               {/* Vertical journey line */}
-              <div className="absolute left-6 md:left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-accent/40 via-yellow-400/20 to-accent/40 rounded-full" />
+              <div className="absolute left-6 md:left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-accent/40 via-yellow-400/20 to-accent/40" />
 
               <div className="space-y-8">
                 {synopsisScenes.map((scene, i) => (
@@ -462,14 +462,14 @@ export default function KikikiSafetyPage() {
                       style={{ transitionDelay: `${i * 150 + 300}ms` }}
                     >
                       {/* Journey node */}
-                      <div className="absolute left-[14px] md:left-[22px] top-6 w-6 h-6 rounded-full bg-[#1E3450] border-2 border-accent/60 flex items-center justify-center z-10">
-                        <div className="w-2 h-2 bg-accent rounded-full" />
+                      <div className="absolute left-[14px] md:left-[22px] top-6 w-6 h-6 bg-[#1E3450] border-2 border-accent/60 flex items-center justify-center z-10">
+                        <div className="w-2 h-2 bg-accent" />
                       </div>
 
-                      <div className="bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] rounded-2xl md:rounded-3xl p-6 md:p-8 hover:bg-white/[0.07] hover:border-white/[0.12] transition-all duration-500 group">
+                      <div className="bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] p-6 md:p-8 hover:bg-white/[0.07] hover:border-white/[0.12] transition-all duration-500 group">
                         {/* Scene number header */}
                         <div className="flex items-center gap-3 mb-4">
-                          <span className="px-3 py-1 bg-accent/15 text-accent text-[10px] font-black tracking-[0.2em] uppercase rounded-full border border-accent/20">
+                          <span className="px-3 py-1 bg-accent/15 text-accent text-[10px] font-black tracking-[0.2em] uppercase border border-accent/20">
                             Scene {scene.sceneNum}
                           </span>
                           <span className="text-xs font-bold text-white/30">
@@ -484,7 +484,7 @@ export default function KikikiSafetyPage() {
                             <>
                               {" "}
                               <span className="inline-flex items-center gap-1.5 align-middle">
-                                <span className="inline-flex w-6 h-6 bg-yellow-400/15 rounded-full items-center justify-center">
+                                <span className="inline-flex w-6 h-6 bg-yellow-400/15 items-center justify-center">
                                   <svg className="w-3.5 h-3.5 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={characterIconPaths[scene.highlightChar!]} />
                                   </svg>
@@ -528,7 +528,7 @@ export default function KikikiSafetyPage() {
               }`}
               style={{ transitionDelay: "900ms" }}
             >
-              <div className="relative py-12 px-8 md:px-12 rounded-3xl bg-gradient-to-br from-accent/15 via-yellow-400/10 to-amber-500/15 border border-accent/25 text-center overflow-hidden">
+              <div className="relative py-12 px-8 md:px-12 bg-gradient-to-br from-accent/15 via-yellow-400/10 to-amber-500/15 border border-accent/25 text-center overflow-hidden">
                 {/* Decorative sparkles in corners */}
                 <div className="absolute top-4 left-4">
                   <svg className="w-5 h-5 text-yellow-400/30 animate-pulse" viewBox="0 0 24 24" fill="currentColor">
@@ -552,7 +552,7 @@ export default function KikikiSafetyPage() {
                 </div>
                 {/* Radial glow behind text */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-72 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
+                  <div className="w-72 h-32 bg-yellow-400/10 blur-3xl" />
                 </div>
 
                 <div className="relative">
@@ -560,11 +560,11 @@ export default function KikikiSafetyPage() {
                     &ldquo;우리 모두, 오늘도 안녕!&rdquo;
                   </p>
                   <div className="mt-4 flex items-center justify-center gap-3">
-                    <span className="w-10 h-[2px] bg-accent/40 rounded-full" />
+                    <span className="w-10 h-[2px] bg-accent/40" />
                     <svg className="w-4 h-4 text-accent/60" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2l2.09 6.26L20.18 10l-6.09 1.74L12 18l-2.09-6.26L3.82 10l6.09-1.74L12 2z" />
                     </svg>
-                    <span className="w-10 h-[2px] bg-accent/40 rounded-full" />
+                    <span className="w-10 h-[2px] bg-accent/40" />
                   </div>
                 </div>
               </div>
@@ -573,7 +573,7 @@ export default function KikikiSafetyPage() {
             {/* Epilogue cards */}
             <div className="mt-10 space-y-6">
               <div
-                className={`bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-6 md:p-8 text-center transition-all duration-700 ${
+                className={`bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] p-6 md:p-8 text-center transition-all duration-700 ${
                   storySection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -644,7 +644,7 @@ export default function KikikiSafetyPage() {
             {safetyTopics.map((topic, i) => (
               <div
                 key={topic.title}
-                className={`relative bg-gray-warm rounded-2xl p-7 md:p-8 hover:scale-105 hover:shadow-xl hover:border-accent/50 border-2 border-transparent cursor-default transition-all duration-500 group ${
+                className={`relative bg-gray-warm p-7 md:p-8 hover:scale-105 hover:shadow-xl hover:border-accent/50 border-2 border-transparent cursor-default transition-all duration-500 group ${
                   topicsSection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -657,7 +657,7 @@ export default function KikikiSafetyPage() {
                 </span>
 
                 {/* Icon with colored background circle */}
-                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
+                <div className="w-14 h-14 bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
                   <svg className="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={topic.icon} />
                   </svg>
@@ -671,7 +671,7 @@ export default function KikikiSafetyPage() {
                 </p>
 
                 {/* Hover gradient border effect overlay */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/0 via-transparent to-yellow-400/0 group-hover:from-accent/5 group-hover:to-yellow-400/5 transition-all duration-500 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-transparent to-yellow-400/0 group-hover:from-accent/5 group-hover:to-yellow-400/5 transition-all duration-500 pointer-events-none" />
               </div>
             ))}
           </div>
@@ -689,8 +689,8 @@ export default function KikikiSafetyPage() {
             }`}
           >
             {/* PRESS badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-black text-white text-xs font-black tracking-widest uppercase rounded-full mb-6">
-              <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-black text-white text-xs font-black tracking-widest uppercase mb-6">
+              <span className="w-2 h-2 bg-red-500 animate-pulse" />
               PRESS
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-black">
@@ -703,7 +703,7 @@ export default function KikikiSafetyPage() {
             {pressArticles.map((article, i) => (
               <div
                 key={article.title}
-                className={`bg-white rounded-2xl p-7 md:p-8 border-l-4 border-accent hover:shadow-lg transition-all duration-700 relative overflow-hidden ${
+                className={`bg-white p-7 md:p-8 border-l-4 border-accent hover:shadow-lg transition-all duration-700 relative overflow-hidden ${
                   pressSection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -720,7 +720,7 @@ export default function KikikiSafetyPage() {
                 />
                 <div className="relative">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-gray-warm text-xs font-bold text-gray-600 rounded-full">
+                    <span className="px-3 py-1 bg-gray-warm text-xs font-bold text-gray-600">
                       {article.source}
                     </span>
                     <span className="text-xs text-gray-400">
@@ -737,7 +737,7 @@ export default function KikikiSafetyPage() {
 
           {/* Summary callout box */}
           <div
-            className={`relative bg-white rounded-3xl p-8 md:p-10 transition-all duration-700 delay-300 overflow-hidden ${
+            className={`relative bg-white p-8 md:p-10 transition-all duration-700 delay-300 overflow-hidden ${
               pressSection.inView
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -754,7 +754,7 @@ export default function KikikiSafetyPage() {
             />
             <div className="relative">
               <div className="flex items-center gap-2 mb-5">
-                <span className="w-1 h-6 bg-accent rounded-full" />
+                <span className="w-1 h-6 bg-accent" />
                 <span className="text-xs font-bold text-accent uppercase tracking-wider">
                   기사 요약
                 </span>
@@ -798,7 +798,7 @@ export default function KikikiSafetyPage() {
             {[1, 2, 3, 4].map((num, i) => (
               <div
                 key={num}
-                className={`relative aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden group transition-all duration-700 ${
+                className={`relative aspect-[4/3] bg-gray-200 overflow-hidden group transition-all duration-700 ${
                   gallerySection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -827,7 +827,7 @@ export default function KikikiSafetyPage() {
                 </div>
                 {/* Text label on image */}
                 <div className="absolute bottom-3 left-3 z-20">
-                  <span className="text-white text-xs font-bold bg-black/30 backdrop-blur-sm px-3 py-1 rounded-full">
+                  <span className="text-white text-xs font-bold bg-black/30 backdrop-blur-sm px-3 py-1">
                     공연 사진 {String(num).padStart(2, "0")}
                   </span>
                 </div>
@@ -848,7 +848,7 @@ export default function KikikiSafetyPage() {
       <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
         <Link
           href="/contact"
-          className="flex items-center justify-center gap-2 w-full py-4 bg-accent text-white font-bold rounded-full shadow-lg shadow-accent/30 hover:bg-accent/90 transition-all duration-300"
+          className="flex items-center justify-center gap-2 w-full py-4 bg-accent text-white font-bold shadow-lg shadow-accent/30 hover:bg-accent/90 transition-all duration-300"
         >
           <svg
             className="w-5 h-5"

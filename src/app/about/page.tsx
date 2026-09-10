@@ -265,7 +265,7 @@ export default function AboutPage() {
               }`}
             >
               <div className="relative">
-                <div className="aspect-[4/5] rounded-3xl overflow-hidden relative shadow-2xl">
+                <div className="aspect-[4/5] overflow-hidden relative shadow-2xl">
                   {aboutImages.map((img, i) => (
                     <Image
                       key={img.src}
@@ -286,7 +286,7 @@ export default function AboutPage() {
                       <button
                         key={i}
                         onClick={() => setCurrentImage(i)}
-                        className={`h-1.5 rounded-full transition-all duration-500 ${
+                        className={`h-1.5 transition-all duration-500 ${
                           i === currentImage
                             ? "w-6 bg-accent"
                             : "w-1.5 bg-white/50 hover:bg-white/80"
@@ -295,7 +295,7 @@ export default function AboutPage() {
                     ))}
                   </div>
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-black text-white p-6 rounded-2xl shadow-xl max-w-[200px]">
+                <div className="absolute -bottom-6 -right-6 bg-black text-white p-6 shadow-xl max-w-[200px]">
                   <p className="text-3xl font-black text-accent">10+</p>
                   <p className="text-sm text-white/70 mt-1">
                     년간 쌓아온
@@ -341,13 +341,13 @@ export default function AboutPage() {
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold rounded-full hover:bg-gray-800 transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold hover:bg-gray-800 transition-colors"
                 >
                   공연 서비스 보기
                 </Link>
                 <Link
                   href="/shows"
-                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-black text-black font-bold rounded-full hover:bg-black hover:text-white transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-black text-black font-bold hover:bg-black hover:text-white transition-colors"
                 >
                   작품 둘러보기
                 </Link>
@@ -379,7 +379,7 @@ export default function AboutPage() {
             {values.map((item, i) => (
               <div
                 key={item.title}
-                className={`group bg-white rounded-3xl p-8 md:p-10 border-t-4 ${item.accentColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ${
+                className={`group bg-white p-8 md:p-10 border-t-4 ${item.accentColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ${
                   valuesSection.inView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-12"
@@ -387,7 +387,7 @@ export default function AboutPage() {
                 style={{ transitionDelay: `${i * 100 + 200}ms` }}
               >
                 <div
-                  className={`w-14 h-14 ${item.iconBg} rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-14 h-14 ${item.iconBg} flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}
                 >
                   {item.icon}
                 </div>
@@ -435,7 +435,7 @@ export default function AboutPage() {
                 }`}
                 style={{ transitionDelay: `${i * 100 + 200}ms` }}
               >
-                <div className="bg-gray-warm rounded-3xl p-8 hover:shadow-lg transition-shadow">
+                <div className="bg-gray-warm p-8 hover:shadow-lg transition-shadow">
                   <p className="text-4xl md:text-5xl font-black text-black">
                     <CountUp
                       end={stat.number}
