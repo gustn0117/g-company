@@ -1,4 +1,4 @@
-const BASE_URL = "https://g-company.hsweb.pics";
+import { SITE_URL as BASE_URL } from "@/lib/site";
 
 const shows = [
   {

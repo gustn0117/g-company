@@ -5,6 +5,8 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/CTABanner";
 import { useInView } from "@/hooks/useInView";
+import JsonLd from "@/components/JsonLd";
+import { SHOWS, SITE_URL, breadcrumbJsonLd } from "@/lib/site";
 
 const shows = [
   {
@@ -54,11 +56,40 @@ const shows = [
   },
 ];
 
+const collectionJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${SITE_URL}/shows#collection`,
+  url: `${SITE_URL}/shows`,
+  name: "지컴퍼니 공연 작품",
+  description:
+    "교육적 메시지와 예술적 감동이 어우러진 지컴퍼니의 창작뮤지컬 라인업",
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: SHOWS.map((show, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: show.title,
+      url: `${SITE_URL}/shows/${show.slug}`,
+    })),
+  },
+};
+
 export default function ShowsPage() {
   const showsSection = useInView();
 
   return (
     <>
+      <JsonLd
+        data={[
+          collectionJsonLd,
+          breadcrumbJsonLd([
+            { name: "홈", path: "/" },
+            { name: "공연 작품", path: "/shows" },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Our Shows"
         title="지컴퍼니의"
