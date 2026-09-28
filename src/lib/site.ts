@@ -108,7 +108,7 @@ export const organizationJsonLd = {
   alternateName: "G Company",
   url: SITE_URL,
   logo: `${SITE_URL}/images/logo.png`,
-  image: `${SITE_URL}/images/the-painting-photo.png`,
+  image: `${SITE_URL}/images/og-image.png`,
   description: SITE_DESCRIPTION,
   telephone: CONTACT.phone,
   email: CONTACT.email,

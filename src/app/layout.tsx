@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/images/the-painting-photo.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "지컴퍼니 찾아가는 뮤지컬 공연 현장",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "지컴퍼니 | 찾아가는 뮤지컬 공연 전문기업",
     description: SITE_DESCRIPTION,
-    images: ["/images/the-painting-photo.png"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,
