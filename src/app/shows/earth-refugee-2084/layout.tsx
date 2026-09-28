@@ -4,7 +4,7 @@ import { SHOWS, breadcrumbJsonLd, showJsonLd } from "@/lib/site";
 
 const show = SHOWS.find((item) => item.slug === "earth-refugee-2084")!;
 
-const title = `${show.title} - ${show.genre}`;
+const title = `${show.title} - ${show.genre} | 지컴퍼니`;
 
 export const metadata: Metadata = {
   title,
