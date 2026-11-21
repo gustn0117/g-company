@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { useInView } from "@/hooks/useInView";
+import { CONTACT } from "@/lib/site";
 
 export default function ContactPage() {
   const formSection = useInView();
@@ -101,7 +102,7 @@ export default function ContactPage() {
                       전화 문의
                     </p>
                     <p className="text-xl font-black text-black">
-                      010-7132-0348
+                      {CONTACT.phone}
                     </p>
                     <p className="text-sm text-gray-400">
                       평일 09:00 ~ 18:00 상담 가능
@@ -130,7 +131,7 @@ export default function ContactPage() {
                       이메일 문의
                     </p>
                     <p className="text-xl font-black text-black">
-                      g_companyspace@naver.com
+                      {CONTACT.email}
                     </p>
                   </div>
                 </div>

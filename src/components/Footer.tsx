@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { CONTACT } from "@/lib/site";
 
 const socialLinks = [
   {
@@ -151,7 +152,7 @@ export default function Footer() {
                     d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
                   />
                 </svg>
-                <span className="text-sm text-white/40">010-7132-0348</span>
+                <span className="text-sm text-white/40">{CONTACT.phone}</span>
               </div>
               <div className="flex items-start gap-3">
                 <svg
@@ -167,9 +168,7 @@ export default function Footer() {
                     d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                   />
                 </svg>
-                <span className="text-sm text-white/40">
-                  g_companyspace@naver.com
-                </span>
+                <span className="text-sm text-white/40">{CONTACT.email}</span>
               </div>
               <div className="flex items-start gap-3">
                 <svg
@@ -204,12 +203,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-xs text-white/25 text-center md:text-left space-y-1">
+            <p>지컴퍼니 | 대표: 최규호 | 사업자등록번호: 191-47-00465</p>
             <p>
-              지컴퍼니 | 대표: OOO | 사업자등록번호: 000-00-00000
-            </p>
-            <p>
-              서울시 도봉구 방학로 3길 13 스페이스도모 | TEL: 010-7132-0348 |
-              EMAIL: g_companyspace@naver.com
+              서울시 도봉구 방학로 3길 13 스페이스도모 | TEL: {CONTACT.phone} |
+              EMAIL: {CONTACT.email}
             </p>
           </div>
           <p className="text-xs text-white/20">

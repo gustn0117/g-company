@@ -6,8 +6,8 @@ export const SITE_DESCRIPTION =
   "학교, 기관, 축제 어디든 직접 찾아가는 맞춤형 뮤지컬 공연 전문기업. 안전교육, 환경, 기업가정신 창작뮤지컬을 기획·제작하고 전국 어디든 무대 설치부터 철수까지 책임집니다.";
 
 export const CONTACT = {
-  phone: "010-7132-0348",
-  email: "g_companyspace@naver.com",
+  phone: "010-2863-8798",
+  email: "g_company_@naver.com",
   address: {
     street: "방학로 3길 13 스페이스도모",
     locality: "도봉구",

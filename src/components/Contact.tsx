@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { CONTACT } from "@/lib/site";
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -105,7 +106,7 @@ export default function Contact() {
                 <div>
                   <p className="text-sm text-gray-400 font-medium">전화 문의</p>
                   <p className="text-xl font-black text-black">
-                    010-7132-0348
+                    {CONTACT.phone}
                   </p>
                   <p className="text-sm text-gray-400">
                     평일 09:00 ~ 18:00 상담 가능
@@ -134,7 +135,7 @@ export default function Contact() {
                     이메일 문의
                   </p>
                   <p className="text-xl font-black text-black">
-                    g_companyspace@naver.com
+                    {CONTACT.email}
                   </p>
                 </div>
               </div>
